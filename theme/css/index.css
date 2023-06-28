@@ -390,7 +390,7 @@ margin-top: 150px;
 
 
 
-@media only screen and (max-width: 725px) {
+@media only screen and (max-width: 920px) {
 	html {
 		font-size: 20px;
 	}
@@ -398,8 +398,15 @@ margin-top: 150px;
 		height: 200px;
 	}
 }
+@media only screen and (max-width: 698px) {
+	.header .title p {
+		font-size: 30px;
+	}
+}
 @media only screen and (max-width: 573px) {
-	
+	.header .title p {
+		font-size: 25px;
+	}
 	.emblem_mini {
 		height: 65px;
 	}
@@ -415,9 +422,6 @@ margin-top: 150px;
 		margin-top: 40px;
 		padding-bottom: 11px
 	}
-	.buttons {
-		border-radius: 0;
-	}
 	.emblem_mini {
 		height: 65px;
 	}
@@ -427,5 +431,21 @@ margin-top: 150px;
 	.ob {
 	display: block;
 	margin-top: 180px;
+	}
+}
+@media only screen and (max-width: 383px) {
+	.header .emblem img {
+		height: 180px;
+	}
+	.header .title p {
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 344px) {
+	.header .emblem img {
+		height: 140px;
+	}
+	.header .title p {
+		font-size: 15px;
 	}
 }
