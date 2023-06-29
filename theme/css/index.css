@@ -397,6 +397,9 @@ margin-top: 150px;
 	.header .emblem img {
 		height: 200px;
 	}
+	.emblem_mini img {
+		height: 150px;
+	}
 }
 @media only screen and (max-width: 698px) {
 	.header .title p {
@@ -407,8 +410,8 @@ margin-top: 150px;
 	.header .title p {
 		font-size: 25px;
 	}
-	.emblem_mini {
-		height: 65px;
+	.emblem_mini img {
+		height: 120px;
 	}
 	
 	.container {
@@ -433,6 +436,14 @@ margin-top: 150px;
 	margin-top: 180px;
 	}
 }
+@media only screen and (max-width: 425px) {
+	.contein2 b {
+		font-size: 18px;
+	}
+	.contein3 b {
+		font-size: 18px;
+	}
+}
 @media only screen and (max-width: 383px) {
 	.header .emblem img {
 		height: 180px;
@@ -447,5 +458,8 @@ margin-top: 150px;
 	}
 	.header .title p {
 		font-size: 15px;
+	}
+	.emblem_mini img {
+		height: 99px;
 	}
 }
