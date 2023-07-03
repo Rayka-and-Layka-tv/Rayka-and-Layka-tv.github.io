@@ -153,13 +153,13 @@ iframe {
 }
 
 .contein2 b {
-	font-size: 25px;
+	font-size: 20px;
 	color: #8A9597;
 }
 
 .contein3 b {
 	margin-top: 28px;
-	font-size: 25px;
+	font-size: 20px;
 	color: #8A9597;
 }
 
@@ -256,6 +256,15 @@ iframe {
 	line-height: 56px;
 }*/
 .video {
+	display: flex;
+	line-height: 56px;
+	justify-content: center;
+	background-blend-mode: multiply;
+	border-radius: 9px;
+	font-size: 50px;
+	line-height: 56px;
+}
+video {
 	display: flex;
 	line-height: 56px;
 	justify-content: center;
@@ -438,10 +447,10 @@ margin-top: 150px;
 }
 @media only screen and (max-width: 425px) {
 	.contein2 b {
-		font-size: 18px;
+		font-size: 11px;
 	}
 	.contein3 b {
-		font-size: 18px;
+		font-size: 11px;
 	}
 }
 @media only screen and (max-width: 383px) {
