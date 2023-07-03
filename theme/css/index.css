@@ -414,6 +414,10 @@ margin-top: 150px;
 	.header .title p {
 		font-size: 30px;
 	}
+	video {
+		width: 480px;
+		height: 280px;
+	}
 }
 @media only screen and (max-width: 573px) {
 	.header .title p {
@@ -444,6 +448,10 @@ margin-top: 150px;
 	display: block;
 	margin-top: 180px;
 	}
+	video {
+		width: 360px;
+		height: 200px;
+	}
 }
 @media only screen and (max-width: 425px) {
 	.contein2 b {
@@ -459,6 +467,10 @@ margin-top: 150px;
 	}
 	.header .title p {
 		font-size: 20px;
+	}
+	video {
+		width: 280px;
+		height: 160px;
 	}
 }
 @media only screen and (max-width: 344px) {
