@@ -181,7 +181,10 @@ iframe {
 	color: #fff;
 	font-size: 50px;
 	text-align: center;
+}
 
+.sob img {
+	width: 750px;
 }
 
 .tn {
@@ -409,6 +412,9 @@ margin-top: 150px;
 	.emblem_mini img {
 		height: 150px;
 	}
+	.sob img {
+		width: 500px;
+	}
 }
 @media only screen and (max-width: 698px) {
 	.header .title p {
@@ -417,6 +423,9 @@ margin-top: 150px;
 	video {
 		width: 480px;
 		height: 280px;
+	}
+	.sob img {
+		width: 400px;
 	}
 }
 @media only screen and (max-width: 573px) {
@@ -452,6 +461,9 @@ margin-top: 150px;
 		width: 360px;
 		height: 200px;
 	}
+	.title1 b {
+		font-size: 30px;
+	}
 }
 @media only screen and (max-width: 425px) {
 	.contein2 b {
@@ -459,6 +471,9 @@ margin-top: 150px;
 	}
 	.contein3 b {
 		font-size: 11px;
+	}
+	.sob img {
+		width: 300px;
 	}
 }
 @media only screen and (max-width: 383px) {
@@ -482,5 +497,8 @@ margin-top: 150px;
 	}
 	.emblem_mini img {
 		height: 99px;
+	}
+	.sob img {
+		width: 200px;
 	}
 }
