@@ -144,6 +144,23 @@ iframe {
 	margin-right: auto;
 }
 
+.rabota {
+/*	flex-grow: 1;*/
+	background-color: #f02;
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+	text-align: center;
+	width: 300px;
+	align-items: center;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+.rabota:hover {
+	background-color: #181513;
+}
+
 .title a {
 	color: #f02;
 }
@@ -187,6 +204,44 @@ iframe {
 	width: 750px;
 }
 
+.trenn {
+	margin-top: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	justify-content: center;
+}
+.tnn {
+	cursor: pointer;
+	width: 700px;
+	height: 700px;
+	margin-left: 11px;
+	flex-grow: 1;
+	max-width: 700px;
+	margin-top: 11px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: flex;
+	justify-content: center;
+	align-items: revert;
+	background-color: rgba(0,0,0,0.90);
+	background-blend-mode: multiply;
+	transition: all 0.1s ease-in;
+	border-radius: 9px;
+	font-size: 50px;
+	line-height: 56px;	
+	color: #FFFFF0;
+}
+.tnn:hover {
+	background-color: rgba(0,0,0,0.55);
+}
+.tnn p {
+	margin: 1em;
+	font-size:  40px;
+	text-align: center;
+}
+
 .tn {
 	width: 700px;
 	height: 700px;
@@ -226,6 +281,16 @@ iframe {
 
 .tn b.two {
 	color: #7FC7FF;
+}
+
+.Back {
+	font-size: 45px;
+	margin-left: 11px;
+	cursor: pointer;
+}
+.Back:hover {
+	background-color: rgba(0,0,0,0.40);
+	transition: all 0.25s ease-in;
 }
 
 .adminphoto {
