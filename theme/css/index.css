@@ -203,6 +203,11 @@ iframe {
 	font-size: 50px;
 	text-align: center;
 }
+.title1 p {
+	color: #f00;
+	font-size: 30px;
+	text-align: left;
+}
 
 .sob img {
 	width: 750px;
