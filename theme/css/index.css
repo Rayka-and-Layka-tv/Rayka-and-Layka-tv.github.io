@@ -178,6 +178,7 @@ iframe {
 	margin-top: 28px;
 	font-size: 20px;
 	color: #8A9597;
+
 }
 
 .yandex {
@@ -198,11 +199,6 @@ iframe {
 	text-align: center;
 }
 
-.title1 b {
-	color: #fff;
-	font-size: 50px;
-	text-align: center;
-}
 .title1 p {
 	color: #f00;
 	font-size: 30px;
@@ -426,6 +422,9 @@ video {
 margin-top: 150px;
 }
 
+.footer2 {
+	text-align: left;
+}
 
 @font-face {
   font-family: 'fontello';
