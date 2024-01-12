@@ -205,6 +205,13 @@ iframe {
 	text-align: left;
 }
 
+
+.title2 p{
+	font-size: 30px;
+	justify-content: center;
+	text-align: center;
+}
+
 .sob img {
 	width: 750px;
 }
