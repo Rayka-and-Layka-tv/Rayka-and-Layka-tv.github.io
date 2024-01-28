@@ -212,8 +212,11 @@ iframe {
 	text-align: center;
 }
 
+.sob {
+	text-align: center;
+}
 .sob img {
-	width: 750px;
+	width: 450px;
 }
 
 .trenn {
