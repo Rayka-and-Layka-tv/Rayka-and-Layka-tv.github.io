@@ -84,13 +84,14 @@ iframe {
 .ob b {
 	margin-left: 11px;
 }
-
 .hhh {
 	margin-left: 11px;
 	color: #f02;
 }
-
 .ob h1 {
+	margin-left: 11px;
+}
+.otdelnoe {
 	margin-left: 11px;
 }
 
@@ -349,6 +350,11 @@ video {
 	line-height: 56px;
 }
 
+.Opros {
+	display: flex;
+	margin: 0px 500px 0px 500px;
+}
+
 .Nashi_horse {
 	margin-left: 11px;
 }
@@ -482,7 +488,11 @@ margin-top: 150px;
 }
 
 
-
+@media only screen and (max-width: 1500px) {
+	.Opros {
+	margin: 0px 0px 0px 0px;
+}
+}
 @media only screen and (max-width: 920px) {
 	html {
 		font-size: 20px;
@@ -502,6 +512,21 @@ margin-top: 150px;
 	.Form iframe {
 		width: 500px;
 	}
+	.header .title p {
+		font-size: 35px;
+	}
+	.title1 {
+		font-size: 28px;
+	}
+	.title1 p {
+		font-size: 20px;
+	}
+	.title2 {
+		font-size: 28px;
+	}
+	.title2 p {
+		font-size: 20px;
+	}
 }
 @media only screen and (max-width: 612px) {
 	.tnn p {
@@ -515,10 +540,13 @@ margin-top: 150px;
 	.tnn p {
 		font-size: 10px;
 	}
+	.header .emblem img {
+		height: 150px;
+	}
 }
 @media only screen and (max-width: 698px) {
 	.header .title p {
-		font-size: 30px;
+		font-size: 25px;
 	}
 	video {
 		width: 480px;
@@ -533,7 +561,7 @@ margin-top: 150px;
 }
 @media only screen and (max-width: 573px) {
 	.header .title p {
-		font-size: 25px;
+		font-size: 20px;
 	}
 	.emblem_mini img {
 		height: 120px;
@@ -546,7 +574,7 @@ margin-top: 150px;
 		padding: 0;
 	}
 	.description {
-		border-radius: 0;
+/*		border-radius: 0;*/
 		margin: 38px 0px 50px 0px;
 	}
 	.content {
@@ -557,7 +585,7 @@ margin-top: 150px;
 		height: 65px;
 	}
 	.header .emblem img {
-		height: 200px;
+		height: 100px;
 	}
 	.ob {
 	display: block;
@@ -573,6 +601,9 @@ margin-top: 150px;
 	.Back {
 		margin-top: 80px;
 		display: block;
+	}
+	.ob p {
+		font-size: 20px;
 	}
 }
 @media only screen and (max-width: 425px) {
@@ -593,24 +624,18 @@ margin-top: 150px;
 	}
 }
 @media only screen and (max-width: 383px) {
-	.header .emblem img {
-		height: 180px;
-	}
 	.header .title p {
-		font-size: 20px;
+		font-size: 15px;
 	}
 	video {
 		width: 280px;
 		height: 160px;
 	}
+	.rabota {
+		width: 200px;
+	}
 }
 @media only screen and (max-width: 344px) {
-	.header .emblem img {
-		height: 140px;
-	}
-	.header .title p {
-		font-size: 15px;
-	}
 	.emblem_mini img {
 		height: 99px;
 	}
