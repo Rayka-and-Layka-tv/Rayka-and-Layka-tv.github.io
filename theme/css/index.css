@@ -488,6 +488,73 @@ margin-top: 150px;
 }
 
 
+
+
+
+
+
+
+.cookie_notice {
+    display: none;
+    position: fixed;
+    z-index: 9999999;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 15px;
+    font-family: Verdana, sans-serif;  
+    color: #FFF;
+    background: #f00;
+    padding: 10px 20px; 
+    border-top: 4px solid #BFE2FF;
+}
+/* Оформление кнопок */
+.cookie_btn {
+    display: inline-block;
+    margin: 10px 6px 4px 6px;
+    text-decoration: none;
+    position: relative;
+    font-size: 13px;
+    padding: 4px 12px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase; 
+    background: #f06;
+    border: 2px solid #BFE2FF;
+}
+.cookie_btn:hover {
+    color: #FFF;
+}
+.cookie_btn:after,
+.cookie_btn:before {
+    position: absolute;
+    height: 2px;
+    left: 50%;
+    background: #FFF;
+    bottom: -6px;
+    content: "";
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+.cookie_btn:before {
+    top: -6px;
+}
+.cookie_btn:hover:after,
+.cookie_btn:hover:before {
+    width: 100%;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1500px) {
 	.Opros {
 	margin: 0px 0px 0px 0px;
