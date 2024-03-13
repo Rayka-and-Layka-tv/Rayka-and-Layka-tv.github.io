@@ -215,6 +215,7 @@ iframe {
 
 .sob {
 	text-align: center;
+	cursor: pointer;
 }
 .sob img {
 	width: 450px;
