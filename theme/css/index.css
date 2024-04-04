@@ -292,6 +292,13 @@ iframe {
 	text-align: center;
 }
 
+.photo {
+	text-align: center;
+}
+.photo img{
+	width: 40%;
+}
+
 .Back {
 	font-size: 45px;
 	margin-left: 11px;
@@ -689,6 +696,18 @@ margin-top: 150px;
 	}
 	.Form iframe {
 		width: 300px;
+	}
+	.title1 {
+		font-size: 18px;
+	}
+	.title1 p {
+		font-size: 10px;
+	}
+	.title2 {
+		font-size: 10px;
+	}
+	.title2 p {
+		font-size: 10px;
 	}
 }
 @media only screen and (max-width: 383px) {
