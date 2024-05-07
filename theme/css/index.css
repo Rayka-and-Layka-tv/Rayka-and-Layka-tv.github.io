@@ -16,6 +16,8 @@ iframe {
 	margin-right: 8px;
 }
 
+font-family: 'Moscow Sans', arial;
+
 #content {
 /*	display: none;*/
 }
@@ -76,6 +78,42 @@ iframe {
 
 .description > p:last-child {
    margin: 0;
+}
+
+.vid {
+	text-align: center;
+	margin-top: 120px;
+}
+.vid1 p {
+	color: #f02;
+}
+.vid1 {
+	display: block;
+	text-align: center;
+	margin-top: 120px;
+}
+.alb {
+	margin-top: 30px;
+	margin-left: 10px;
+	background: #f02;
+	text-align: center;
+	border-radius: 90px;
+}
+img.background {
+  min-height: 100%;
+  min-width: 640px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Зависит от размера изображения */
+  @media screen and (max-width: 640px){
+	img.bg {
+	  left: 50%;
+	  margin-left: -320px;
+	}
+  }
 }
 
 .ob p {
