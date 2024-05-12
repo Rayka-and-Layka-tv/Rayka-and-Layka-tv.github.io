@@ -126,6 +126,9 @@ font-family: 'Moscow Sans', arial;
 	max-width: 500px;
 	margin-left: 20px;
 }
+form .Footer {
+	display: none;
+}
 
 .alb {
 	margin-top: 30px;
