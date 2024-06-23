@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(93632025, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/93632025" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="yandex-verification" content="d6393e3431b0c435" />
+	<title>{% block title %}"Райка and Лайка" - интернет-телеканал{% endblock %}</title>
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+	<style>@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');</style>
+
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/index.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="sheet">
+	<style>@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');</style>
+
+
+	<style>
+		@font-face {
+		  font-family: 'fontello';
+		  src: url('./font/fontello.eot?89923291');
+		  src: url('./font/fontello.eot?89923291#iefix') format('embedded-opentype'),
+		       url('./font/fontello.woff?89923291') format('woff'),
+		       url('./font/fontello.ttf?89923291') format('truetype'),
+		       url('./font/fontello.svg?89923291#fontello') format('svg');
+		  font-weight: normal;
+		  font-style: normal;
+		}
+		.demo-icon {
+		  font-family: "fontello";
+		  font-style: normal;
+		  font-weight: normal;
+		  speak: never;
+		 
+		  display: inline-block;
+		  text-decoration: inherit;
+		  width: 1em;
+		  margin-right: .2em;
+		  text-align: center;
+		  /* opacity: .8; */
+		 
+		  /* For safety - reset parent styles, that can break glyph codes*/
+		  font-variant: normal;
+		  text-transform: none;
+		 
+		  /* fix buttons height, for twitter bootstrap */
+		  line-height: 1em;
+		 
+		  /* Animation center compensation - margins should be symmetric */
+		  /* remove if not needed */
+		  margin-left: .2em;
+		 
+		  /* You can be more comfortable with increased icons size */
+		  /* font-size: 120%; */
+		 
+		  /* Font smoothing. That was taken from TWBS */
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		 
+		  /* Uncomment for 3D effect */
+		  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+		}
+	</style>
+
+<!-- <style>
+  #snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+  }
+
+  .snowflake {
+    position: fixed;
+    background-color: #CCC;
+    user-select: none;
+    z-index: 1000;
+    pointer-events: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
+</style>
+
+<div id="snowflakeContainer">
+  <span class="snowflake"></span>
+</div>
+
+<script>
+  // Массив для хранения объектов Snowflake
+  var snowflakes = [];
+
+  // Глобальные переменные для размера окна браузера
+  var browserWidth;
+  var browserHeight;
+
+  // Указываем количество снежинок, которые должны быть видимыми
+  var numberOfSnowflakes = 55;
+
+  // Флаг для сброса положения снежинок
+  var resetPosition = false;
+
+  // Устанавливаем параметр enableAnimations
+  var enableAnimations = false;
+  var reduceMotionQuery = matchMedia("(prefers-reduced-motion)");
+
+  // Изменяем значение enableAnimations
+  function setAccessibilityState() {
+    if (reduceMotionQuery.matches) {
+      enableAnimations = false;
+    } else { 
+      enableAnimations = true;
+    }
+  }
+  setAccessibilityState();
+
+  reduceMotionQuery.addListener(setAccessibilityState);
+
+  //
+  // Все начинается здесь...
+  //
+  function setup() {
+    if (enableAnimations) {
+      window.addEventListener("DOMContentLoaded", generateSnowflakes, false);
+      window.addEventListener("resize", setResetFlag, false);
+    }
+  }
+  setup();
+
+  //
+  // Конструктор объекта Snowflake
+  //
+  function Snowflake(element, speed, xPos, yPos) {
+    // устанавливаем начальные свойства снежинки
+    this.element = element;
+    this.speed = speed;
+    this.xPos = xPos;
+    this.yPos = yPos;
+    this.scale = 1;
+
+    // объявляем переменные, используемые для движения снежинки
+    this.counter = 0;
+    this.sign = Math.random() < 0.5 ? 1 : -1;
+
+    // устанавливаем значения начальной непрозрачности и размера снежинки 
+    this.element.style.opacity = (.1 + Math.random()) / 3;
+  }
+
+  //
+  // Функция, ответственная за перемещение снежинки
+  //
+  Snowflake.prototype.update = function () {
+    // используем тригонометрию, чтобы определить позицию x и y
+    this.counter += this.speed / 5000;
+    this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40;
+    this.yPos += Math.sin(this.counter) / 40 + this.speed / 30;
+    this.scale = .5 + Math.abs(10 * Math.cos(this.counter) / 20);
+
+    // устанавливаем позицию снежинки
+    setTransform(Math.round(this.xPos), Math.round(this.yPos), this.scale, this.element);
+
+    // если снежинка опустится ниже окна браузера, переместим ее обратно наверх   
+    if (this.yPos > browserHeight) {
+      this.yPos = -50;
+    }
+  }
+
+  //
+  // Эффективный способ установить положение и размер снежинки
+  //
+  function setTransform(xPos, yPos, scale, el) {
+    el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0) scale(${scale}, ${scale})`;
+  }
+
+  //
+  // Функция, ответственная за создание снежинки
+  //
+  function generateSnowflakes() {
+
+    // получаем элемент снежинки из DOM и сохраняем его
+    var originalSnowflake = document.querySelector(".snowflake");
+
+    // получаем доступ к контейнеру родителя элемента снежинки
+    var snowflakeContainer = originalSnowflake.parentNode;
+    snowflakeContainer.style.display = "block";
+
+    // получаем размер окна браузера
+    browserWidth = document.documentElement.clientWidth;
+    browserHeight = document.documentElement.clientHeight;
+
+    // создаем снежинку	
+    for (var i = 0; i < numberOfSnowflakes; i++) {
+
+      // клонируем индивидуальную снежинку и добавляем ее в snowflakeContainer
+      var snowflakeClone = originalSnowflake.cloneNode(true);
+      snowflakeContainer.appendChild(snowflakeClone);
+
+      // устанавливаем начальную позицию и свойства для оригинальной снежинки
+      var initialXPos = getPosition(50, browserWidth);
+      var initialYPos = getPosition(50, browserHeight);
+      var speed = 5 + Math.random() * 40;
+
+      // создаем объект Snowflake
+      var snowflakeObject = new Snowflake(snowflakeClone,
+        speed,
+        initialXPos,
+        initialYPos);
+      snowflakes.push(snowflakeObject);
+    }
+
+    // убираем снежинку, так как больше не нужно, чтобы она была видимой
+    snowflakeContainer.removeChild(originalSnowflake);
+
+    moveSnowflakes();
+  }
+
+  //
+  // Отвечает за перемещение каждой снежинки, вызывая функцию обновления
+  //
+  function moveSnowflakes() {
+
+    if (enableAnimations) {
+      for (var i = 0; i < snowflakes.length; i++) {
+        var snowflake = snowflakes[i];
+        snowflake.update();
+      }      
+    }
+
+    // Сбрасывает значения позиций всех снежинок до установки нового значения
+    if (resetPosition) {
+      browserWidth = document.documentElement.clientWidth;
+      browserHeight = document.documentElement.clientHeight;
+
+      for (var i = 0; i < snowflakes.length; i++) {
+        var snowflake = snowflakes[i];
+
+        snowflake.xPos = getPosition(50, browserWidth);
+        snowflake.yPos = getPosition(50, browserHeight);
+      }
+
+      resetPosition = false;
+    }
+
+    requestAnimationFrame(moveSnowflakes);
+  }
+
+  //
+  
+  function getPosition(offset, size) {
+    return Math.round(-1 * offset + Math.random() * (size + 2 * offset));
+  }
+
+  //
+  // Сброс позиций всех снежинок
+  //
+  function setResetFlag(e) {
+    resetPosition = true;
+  }
+</script> -->
+
+<!-- Принятие куки -->
+<div class="cookie_notice">
+    Этот сайт использует файлы cookies и сервисы сбора технических данных посетителей для обеспечения работоспособности и улучшения качества обслуживания. Продолжая использовать наш сайт, вы автоматически соглашаетесь с использованием данных технологий.
+    <div>
+        <a class="cookie_btn" id="cookie_close" href="#close">Согласиться</a>
+        <a class="cookie_btn" href="/politica">Политика конфиденциальности</a>
+    </div>
+</div>
+<script>
+	// функция возвращает cookie с именем name, если есть, если нет, то undefined    
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+let cookiecook = getCookie("cookiecook"),
+cookiewin = document.getElementsByClassName('cookie_notice')[0];    
+// проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
+if (cookiecook != "no") {
+    // показываем    
+    cookiewin.style.display="block"; 
+    // закрываем по клику
+    document.getElementById("cookie_close").addEventListener("click", function(){
+        cookiewin.style.display="none";    
+        // записываем cookie на 1 день, с которой мы не показываем окно
+        let date = new Date;
+        date.setDate(date.getDate() + 1);    
+        document.cookie = "cookiecook=no; path=/; expires=" + date.toUTCString();               
+    });
+}
+</script>
+<!-- Принятие куки -->
+</head>
+<body>
+	<div class="container">
+		<div class="buttons">
+		<a class="button" href="/"><p>Главная</p></a>
+		<a class="button" href="/livetv"><p>Прямой эфир</p></a>
+		<a class="button" href="/history"><p>Вакансии</p></a>
+		<!-- <a class="button" href="/rabota"><p>Стать частью команды</p></a> -->
+		</div>
+		{% block content %}{% endblock %}
+	</div>
+</body>
+</html>
