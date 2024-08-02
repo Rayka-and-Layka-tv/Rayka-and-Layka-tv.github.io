@@ -41,10 +41,11 @@ font-family: 'Moscow Sans', arial;
 
 .header .emblem img {
 	display: block;
-	height: 400px;
+	height: 300px;
 	margin-left: auto;
 	margin-right: auto;
 /*	border-radius: 500px;*/
+	margin-top: 120px;
 }
 .header .title p {
 	font-size: 38px;
@@ -157,11 +158,17 @@ form .Footer {
 
 .buttons {
 	display: flex;
-	width: 100%;
+	width: 90%;
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
 	overflow: hidden;
 	margin-bottom: 38px;
+	margin-top: 50px;
+	align-items: revert;
+	background: #000;
+	position: fixed;
+	border:  2px solid #f00;
+	border-top: none;
 }
 
 .button {
@@ -170,8 +177,88 @@ form .Footer {
 	cursor: pointer;
 	transition: all 0.2s ease-in;
 	text-align: center;
-	vertical-align: middle;
 	align-items: center;
+}
+
+
+
+
+
+
+.dropbtn {
+  background-color: #F02;
+  color: white;
+  padding: 16px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+	position: relative;
+	float: right;
+}
+/* Кнопка выпадающего меню при наведении и фокусировке */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: black;
+}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+  display: inline-block;
+ 	position: sticky;
+/* 	position: fixed;*/
+	top: 0;
+ 	background: #293133;
+ 	width: 98%;
+ 	border:  2px solid #f00;
+ 	border-top: none;
+ 	padding-top: 0;
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+  display: none;
+  position: revert;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  float: right;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Показать выпадающее меню (используйте JS, чтобы добавить этот класс .dropdown-content содержимого, когда пользователь нажимает на кнопку выпадающего списка) */
+.show {display:block;}
+
+
+
+
+
+
+
+
+.logoo {
+	display: flex;
+}
+.logoo img {
+	height: 60px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: auto;
+}
+.logoo p {
+	margin-left: 10px;
+	font-size: 20px;
+	text-align: center;
 }
 
 .button:hover {
@@ -188,6 +275,7 @@ form .Footer {
 	transition: all 0.2s ease-in;
 	text-align: center;
 	vertical-align: center;
+	margin-bottom: 270px;
 }
 
 .button_glbol:hover {
@@ -239,7 +327,8 @@ form .Footer {
 	margin-top: 28px;
 	font-size: 20px;
 	color: #8A9597;
-
+	margin-left: 20px;
+	margin-bottom: 20px;
 }
 
 .yandex {
@@ -251,6 +340,7 @@ form .Footer {
 }
 .ya {
 	margin-top: 30px;
+	margin-left: 30px;
 }
 
 .politica a {
@@ -261,6 +351,7 @@ form .Footer {
 	margin: 96px 0px 74px 0px;
 	font-size: 38px;
 	text-align: center;
+	margin-left: 20px;
 }
 
 .title1 p {
@@ -269,11 +360,14 @@ form .Footer {
 	text-align: left;
 }
 
-
+.title2 {
+	margin-top: 30px;
+	margin-left: 30px;
+}
 .title2 p{
-	font-size: 30px;
-	justify-content: center;
-	text-align: center;
+	font-size: 25px;
+	justify-content: left;
+	text-align: left;
 }
 
 .sob {
@@ -432,6 +526,7 @@ video {
 
 .emblem_mini {
 	margin-left: 11px;
+	margin-top: 100px;
 	display: block;
 
 }
@@ -512,6 +607,37 @@ margin-top: 150px;
 .footer2 {
 	text-align: left;
 }
+.podval{
+	background: #000;
+	position: bottom;
+	display: block;
+}
+
+
+/*Изгиб логотипа*/
+
+/*.emblem {
+  transition: transform 2s;
+}
+
+.emblem:hover {
+  transform: skew(20deg, 10deg);
+}*/
+
+
+@keyframes example {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.emblem:hover {
+  animation: example 4s infinite;
+}
+
+/*....*/
+
+
 
 @font-face {
   font-family: 'fontello';
@@ -626,10 +752,23 @@ margin-top: 150px;
 
 
 
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1500px) {
 	.Opros {
 	margin: 0px 0px 0px 0px;
+	}
 }
+@media only screen and (max-width: 1067px) {
+	.buttons {
+		width: 85%;
+	}
 }
 @media only screen and (max-width: 920px) {
 	html {
@@ -671,6 +810,10 @@ margin-top: 150px;
 	.vid1 img {
 	max-width: 300px;
 	}
+	.video iframe {
+		width: 620px;
+		height: 305px;
+	}
 }
 @media only screen and (max-width: 612px) {
 	.tnn p {
@@ -678,6 +821,15 @@ margin-top: 150px;
 	}
 	.Form iframe {
 		width: 400px;
+	}
+	.logoo img {
+	height: 55px;
+	}
+	.logoo p {
+		font-size: 15px;
+	}
+	.buttons {
+		width: 80%;
 	}
 }
 @media only screen and (max-width: 607px) {
@@ -736,10 +888,6 @@ margin-top: 150px;
 	display: block;
 	margin-top: 180px;
 	}
-	video {
-		width: 360px;
-		height: 200px;
-	}
 	.title1 b {
 		font-size: 30px;
 	}
@@ -749,6 +897,19 @@ margin-top: 150px;
 	}
 	.ob p {
 		font-size: 20px;
+	}
+	.buttons {
+		width: 100%;
+	}
+	.dropdown {
+		width: 100%;
+	}
+	.logoo img {
+	height: 50px;
+	}
+	.logoo p {
+		font-size: 12px;
+		margin-top: 22px;
 	}
 }
 @media only screen and (max-width: 425px) {
@@ -773,17 +934,21 @@ margin-top: 150px;
 	.title1 p {
 		font-size: 10px;
 	}
-	.title2 {
-		font-size: 10px;
+	.title1 b {
+		font-size: 20px;
 	}
 	.title2 p {
-		font-size: 10px;
+		font-size: 20px;
 	}
 	.vid img {
 	max-width: 200px;
 	}
 	.vid1 img {
 	max-width: 200px;
+	}
+	.video iframe {
+		width: 520px;
+		height: 205px;
 	}
 }
 @media only screen and (max-width: 383px) {
