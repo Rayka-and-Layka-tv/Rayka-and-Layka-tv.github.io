@@ -88,7 +88,7 @@
 	</style>
 
 <!-- Принятие куки -->
-<div class="cookie_notice">
+<!-- <div class="cookie_notice">
     Этот сайт использует файлы cookies и сервисы сбора технических данных посетителей для обеспечения работоспособности и улучшения качества обслуживания. Продолжая использовать наш сайт, вы автоматически соглашаетесь с использованием данных технологий.
     <div>
         <a class="cookie_btn" id="cookie_close" href="#close">Согласиться</a>
@@ -96,7 +96,6 @@
     </div>
 </div>
 <script>
-	// функция возвращает cookie с именем name, если есть, если нет, то undefined    
 function getCookie(name) {
     let matches = document.cookie.match(new RegExp(
     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
@@ -105,27 +104,23 @@ function getCookie(name) {
 }
 let cookiecook = getCookie("cookiecook"),
 cookiewin = document.getElementsByClassName('cookie_notice')[0];    
-// проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
 if (cookiecook != "no") {
-    // показываем    
     cookiewin.style.display="block"; 
-    // закрываем по клику
     document.getElementById("cookie_close").addEventListener("click", function(){
         cookiewin.style.display="none";    
-        // записываем cookie на 1 день, с которой мы не показываем окно
         let date = new Date;
         date.setDate(date.getDate() + 1);    
         document.cookie = "cookiecook=no; path=/; expires=" + date.toUTCString();               
     });
 }
-</script>
+</script> -->
 <!-- Принятие куки -->
 </head>
 <body>
 	<div class="container">
 		<div class="buttons">
 			<div class="logoo">
-				<img src="/theme/images/NewLogo.png">
+				<img src="/theme/images/Logoreb.png">
 				<p>Интернет-телеканал "Райка and Лайка"</p>
 			  
 			</div>
@@ -190,7 +185,7 @@ window.onclick = function(event) {
           <iframe src="https://vk.com/video_ext.php?oid=-214689242&id=456239083&hd=1" width="640" height="360" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
      </div>
      <div class="title1">
-        <b>Расписание на 21.10.2024</b>
+        <b>Расписание на 22.10.2024</b>
         <p>8:00 МСК:</p>
         <p>- Неудачные дубли телепередачи "ВЕЛОМАРШРУТ"</p>
         <p>8:02 МСК:</p>
