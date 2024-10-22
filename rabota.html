@@ -88,7 +88,7 @@
 	</style>
 
 <!-- Принятие куки -->
-<div class="cookie_notice">
+<!-- <div class="cookie_notice">
     Этот сайт использует файлы cookies и сервисы сбора технических данных посетителей для обеспечения работоспособности и улучшения качества обслуживания. Продолжая использовать наш сайт, вы автоматически соглашаетесь с использованием данных технологий.
     <div>
         <a class="cookie_btn" id="cookie_close" href="#close">Согласиться</a>
@@ -96,7 +96,6 @@
     </div>
 </div>
 <script>
-	// функция возвращает cookie с именем name, если есть, если нет, то undefined    
 function getCookie(name) {
     let matches = document.cookie.match(new RegExp(
     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
@@ -105,27 +104,23 @@ function getCookie(name) {
 }
 let cookiecook = getCookie("cookiecook"),
 cookiewin = document.getElementsByClassName('cookie_notice')[0];    
-// проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
 if (cookiecook != "no") {
-    // показываем    
     cookiewin.style.display="block"; 
-    // закрываем по клику
     document.getElementById("cookie_close").addEventListener("click", function(){
         cookiewin.style.display="none";    
-        // записываем cookie на 1 день, с которой мы не показываем окно
         let date = new Date;
         date.setDate(date.getDate() + 1);    
         document.cookie = "cookiecook=no; path=/; expires=" + date.toUTCString();               
     });
 }
-</script>
+</script> -->
 <!-- Принятие куки -->
 </head>
 <body>
 	<div class="container">
 		<div class="buttons">
 			<div class="logoo">
-				<img src="/theme/images/NewLogo.png">
+				<img src="/theme/images/Logoreb.png">
 				<p>Интернет-телеканал "Райка and Лайка"</p>
 			  
 			</div>
@@ -179,7 +174,7 @@ window.onclick = function(event) {
   </footer><!-- /.post-info -->
   <div class="entry-content">
     <div class="emblem_mini">
-    <a href="/"><img src="/theme/images/NewLogo.png"></a>
+    <a href="/"><img src="/theme/images/Logoreb.png"></a>
 </div>
 
 <div class="trenn">
@@ -202,7 +197,7 @@ window.onclick = function(event) {
 		</div>
 		<div class="footer2">
 		     <div class="sob">
-		          <a href="https://vk.com/motion.deru"><img src="/theme/images/Montion Deru 2.png"></a>
+		          <a href="https://vk.com/motion.deru"><img src="/theme/images/Motion Deru1.png"></a>
 		     </div>
 		    <div class="contein3"><b>© Интернет-телеканал "Райка and Лайка"</b>
 		    	<p>.</p></div>

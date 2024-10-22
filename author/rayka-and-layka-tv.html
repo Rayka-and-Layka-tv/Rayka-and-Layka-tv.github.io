@@ -88,7 +88,7 @@
 	</style>
 
 <!-- Принятие куки -->
-<div class="cookie_notice">
+<!-- <div class="cookie_notice">
     Этот сайт использует файлы cookies и сервисы сбора технических данных посетителей для обеспечения работоспособности и улучшения качества обслуживания. Продолжая использовать наш сайт, вы автоматически соглашаетесь с использованием данных технологий.
     <div>
         <a class="cookie_btn" id="cookie_close" href="#close">Согласиться</a>
@@ -96,7 +96,6 @@
     </div>
 </div>
 <script>
-	// функция возвращает cookie с именем name, если есть, если нет, то undefined    
 function getCookie(name) {
     let matches = document.cookie.match(new RegExp(
     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
@@ -105,27 +104,23 @@ function getCookie(name) {
 }
 let cookiecook = getCookie("cookiecook"),
 cookiewin = document.getElementsByClassName('cookie_notice')[0];    
-// проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
 if (cookiecook != "no") {
-    // показываем    
     cookiewin.style.display="block"; 
-    // закрываем по клику
     document.getElementById("cookie_close").addEventListener("click", function(){
         cookiewin.style.display="none";    
-        // записываем cookie на 1 день, с которой мы не показываем окно
         let date = new Date;
         date.setDate(date.getDate() + 1);    
         document.cookie = "cookiecook=no; path=/; expires=" + date.toUTCString();               
     });
 }
-</script>
+</script> -->
 <!-- Принятие куки -->
 </head>
 <body>
 	<div class="container">
 		<div class="buttons">
 			<div class="logoo">
-				<img src="/theme/images/NewLogo.png">
+				<img src="/theme/images/Logoreb.png">
 				<p>Интернет-телеканал "Райка and Лайка"</p>
 			  
 			</div>
@@ -163,7 +158,7 @@ window.onclick = function(event) {
 
 <div class="header">
 	<div class="emblem">
-		<img src="/theme/images/NewLogo.png">
+		<img src="/theme/images/Logoreb.png">
 	</div>
 	<div class="title">
 		<p>Интернет-телеканал "Райка and Лайка"</p>
@@ -187,36 +182,42 @@ window.onclick = function(event) {
 
 <div class="title1">
 		<b>Прямой эфир телеканала</b><br>
-		<mark>Интернет-канал сейчас ничего не вещает</mark><br>
-		<mark>Запись вещания:</mark>
+		<!-- <mark>Интернет-телеканал сейчас ничего не вещает</mark><br> -->
+		<!-- <mark>Запись вещания:</mark> -->
 </div>
 <div class="video">
-	<iframe width="720" height="405" src="https://rutube.ru/play/embed/a7d1670412d8018f3e21dee9fcdc5037/?skinColor=e53935" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+	<iframe src="https://vk.com/video_ext.php?oid=-214689242&id=456239083&hd=1" width="640" height="360" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
 
 </div>
 <div class="title1">
-		<b>Расписание на 27.08.2024</b>
-        <p>С 14:12 МСК:</p>
+		<b>Расписание на 23.10.2024</b>
+        <p>8:00 МСК:</p>
+        <p><mark>Представление ребрендинга!</mark></p>
+        <p>8:02 МСК:</p>
+        <p>- Неудачные дубли телепередачи "ВЕЛОМАРШРУТ"</p>
+        <p>8:03 МСК:</p>
+        <p>- "ВЕЛОМАРШРУТ" - Некрасовка, Косино-Ухтомский, Новокосино</p>
+        <p>С 8:20 МСК:</p>
         <p>- Фильм "Чудеса случаются"</p>
         <p>- Короткометражный фильм "Страйдер"</p>
-        <!-- <p>-Короткометражный фильм "Страйдер 2"</p> -->
         <p>- Обзорная передача про игру в Roblox "Метро Москвы Некрасовка" - 2 серия.</p>
         <p>- Короткометражный фильм "СДЕЛКА".</p>
         <p>- Велопрогулка по Подмосковью - Люберцы</p>
         <p>- "Импульс - шаг в будущее"</p>
         <p>- Короткометражный фильм "Беседа"</p>
         <p>- Короткометражный фильм "Скейт"</p>
-        <p>16:20 МСК:</p>
+        <p>9:30 МСК:</p>
         <p>- К/Ф "ЭГО"</p>
-        <p>16:43 МСК:</p>
+        <p>9:50 МСК:</p>
+        <p>- "ВЕЛОМАРШРУТ" - Некрасовка, Косино-Ухтомский, Новокосино</p>
+        <p>10:10 МСК:</p>
         <p>- К/Ф "Карачун"</p>
-        <!-- <p>19:07 МСК:</p>
-        <p>Главное к этой минуте</p> -->
-        <p>17:08 МСК:</p>
+        <p>11:15 МСК:</p>
         <p>Продолжение вещания</p>
-        <p>20:00 МСК:</p>
-        <p>"ВЕЛОМАРШРУТ" - Некрасовка, Косино-Ухтомский, Новокосино <mark>НОВОЕ!</mark></p>
-</div>
+        <p>21:00 МСК:</p>
+        <p>- "ВЕЛОМАРШРУТ" - Некрасовка, Косино-Ухтомский, Новокосино</p>
+        <p>16:50 МСК:</p>
+        <p>Продолжение вещания</p>
 <!-- <div class="photo"><img src="/theme/images/Rpr29qovqzc.jpg"></div> -->
 <div class="Opros">
 	<!-- <iframe src="https://yandex.ru/chat#/join/0e0da34c-6352-4b74-8963-4b8d612868df/1717604674945027" width="850" height="478" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen></iframe> -->
@@ -245,7 +246,7 @@ window.onclick = function(event) {
 		</div>
 		<div class="footer2">
 		     <div class="sob">
-		          <a href="https://vk.com/motion.deru"><img src="/theme/images/Montion Deru 2.png"></a>
+		          <a href="https://vk.com/motion.deru"><img src="/theme/images/Motion Deru1.png"></a>
 		     </div>
 		    <div class="contein3"><b>© Интернет-телеканал "Райка and Лайка"</b>
 		    	<p>.</p></div>
