@@ -816,6 +816,9 @@ margin-top: 150px;
 		width: 620px;
 		height: 305px;
 	}
+	.vik iframe {
+		width: 450px;
+	}
 }
 @media only screen and (max-width: 612px) {
 	.tnn p {
@@ -913,6 +916,9 @@ margin-top: 150px;
 		font-size: 12px;
 		margin-top: 22px;
 	}
+	.vik iframe {
+		width: 350px;
+	}
 }
 @media only screen and (max-width: 425px) {
 	.contein2 b {
@@ -963,6 +969,9 @@ margin-top: 150px;
 	}
 	.rabota {
 		width: 200px;
+	}
+	.vik iframe {
+		width: 300px;
 	}
 }
 @media only screen and (max-width: 344px) {
