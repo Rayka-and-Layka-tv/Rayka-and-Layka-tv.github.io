@@ -358,7 +358,7 @@ form .Footer {
 
 .title1 p {
 	color: #f00;
-	font-size: 30px;
+	font-size: 20px;
 	text-align: left;
 }
 
@@ -795,13 +795,13 @@ margin-top: 150px;
 		font-size: 35px;
 	}
 	.title1 {
-		font-size: 28px;
+		font-size: 22px;
 	}
 	.title1 p {
-		font-size: 20px;
+		font-size: 15px;
 	}
 	.title2 {
-		font-size: 28px;
+		font-size: 24px;
 	}
 	.title2 p {
 		font-size: 20px;
@@ -835,6 +835,12 @@ margin-top: 150px;
 	}
 	.buttons {
 		width: 80%;
+	}
+	.title1 {
+		font-size: 20px;
+	}
+	.title1 p {
+		font-size: 12px;
 	}
 }
 @media only screen and (max-width: 607px) {
@@ -894,7 +900,7 @@ margin-top: 150px;
 	margin-top: 180px;
 	}
 	.title1 b {
-		font-size: 30px;
+		font-size: 26px;
 	}
 	.Back {
 		margin-top: 80px;
@@ -957,6 +963,12 @@ margin-top: 150px;
 	.video iframe {
 		width: 520px;
 		height: 205px;
+	}
+	.title1 {
+		font-size: 21px;
+	}
+	.title1 p {
+		font-size: 12px;
 	}
 }
 @media only screen and (max-width: 383px) {
