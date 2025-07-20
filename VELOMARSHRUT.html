@@ -181,14 +181,186 @@ window.onclick = function(event) {
 
 <div class="program-list">
     <!-- Карточка передачи 1 -->
-    <a href="/Velomarshrut1"><div class="program-card">
+    <div class="program-card">
         <img src="/theme/images/Velomarshrut1.png" alt="Название передачи" class="program-image">
         <div class="program-info">
             <h3 class="program-title">ВЕЛОМАРШРУТ: Москва (Некрасовка, Косино-Ухтомский, Новокосино)</h3>
             <p class="program-description">Мы побывали в трёх районах Москвы, проехались по самым красивым и доступным местам!</p>
         </div>
-    </div></a>
+    </div>
+    <!-- Добавляем это перед закрывающим тегом </body> -->
+    <div class="video-modal" id="videoModal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <iframe src="https://vk.com/video_ext.php?oid=-214689242&id=456239080&hd=2&autoplay=1" width="853" height="480" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+        <!-- Добавленные текстовые элементы -->
+        <div class="modal-header">
+          <h2 class="modal-title">ВЕЛОМАРШРУТ: Москва (Некрасовка, Косино-Ухтомский, Новокосино)</h2>
+          <p class="modal-description">ВЕЛОМАРШРУТ - это проект ИПТВ «Райка and Лайка», который показывает различные велосипедные маршруты в городах России, а так же рассказывает про места, которые находятся рядом.<br>
+            Эта серия — самая первая, которая положила начало проекта и первая телепередача съёмочной группы.<br>
+            Маршрут был разработан сотрудниками ИПТВ «Райка and Лайка», которые ранее уже выбирали его для своих прогулок с двухколёсным конём.</p>
+        </div>
+      </div>
+    </div>
 </div>
+<!-- <div class="program-list">
+    <div class="program-card">
+        <img src="/theme/images/Velomarshrut1.png" alt="Название передачи" class="program-image">
+        <div class="program-info">
+            <h3 class="program-title">ВЕЛОМАРШРУТ: Москва (Некрасовка, Косино-Ухтомский, Новокосино)</h3>
+            <p class="program-description">Мы побывали в трёх районах Москвы, проехались по самым красивым и доступным местам!</p>
+        </div>
+    </div>
+    <div class="video-modal" id="videoModal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <div class="video-wrapper">
+          Вставьте ваш видео-код (YouTube iframe или HTML5 video)
+          <video controls class="video-player">
+            <iframe src="https://vk.com/video_ext.php?oid=-214689242&id=456239080&hd=2&autoplay=1" width="853" height="480" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+            Ваш браузер не поддерживает видео тег.
+          </video>
+        </div>
+        <div class="modal-header">
+          <h2 class="modal-title">ВЕЛОМАРШРУТ: Москва (Некрасовка, Косино-Ухтомский, Новокосино)</h2>
+          <p class="modal-description">ВЕЛОМАРШРУТ - это проект ИПТВ «Райка and Лайка», который показывает различные велосипедные маршруты в городах России, а так же рассказывает про места, которые находятся рядом.<br>
+            Эта серия — самая первая, которая положила начало проекта и первая телепередача съёмочной группы.<br>
+            Маршрут был разработан сотрудниками ИПТВ «Райка and Лайка», которые ранее уже выбирали его для своих прогулок с двухколёсным конём.</p>
+        </div>
+      </div>
+    </div>
+</div>
+ -->
+
+
+
+
+<style>
+/* Добавляем новые стили для текста */
+.modal-header {
+  margin-bottom: 20px;
+  padding: 0 15px;
+  margin-top: 20px;
+}
+
+.modal-title {
+  color: #1a1a1a;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.modal-description {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+/* Стили модального окна */
+.video-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  width: 80%;
+  max-width: 900px;
+  margin: 2% auto;
+  padding: 30px;
+  border-radius: 12px;
+  z-index: 1001;
+  animation: modalAppear 0.3s ease-out;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 соотношение */
+}
+
+.video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.close-modal:hover {
+  color: #000;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Добавляем к предыдущим стилям карточек */
+.program-card {
+  cursor: pointer;
+  position: relative;
+}
+</style>
+
+<script>
+// Добавляем обработчики событий
+document.querySelectorAll('.program-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.getElementById('videoModal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+document.querySelector('.close-modal').addEventListener('click', closeModal);
+document.querySelector('.modal-overlay').addEventListener('click', closeModal);
+
+function closeModal() {
+  document.getElementById('videoModal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+  const video = document.querySelector('.video-player');
+  video.pause();
+}
+
+// Закрытие по Esc
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
   </div><!-- /.entry-content -->
 </section>
 	</div>
