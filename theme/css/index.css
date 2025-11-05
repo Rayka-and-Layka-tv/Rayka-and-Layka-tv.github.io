@@ -406,7 +406,7 @@ form .Footer {
 	cursor: pointer;
 }
 .sob img {
-	width: 450px;
+	width: 80px;
 }
 
 .trenn {
@@ -864,7 +864,8 @@ margin-top: 150px;
 		height: 150px;
 	}
 	.sob img {
-		width: 500px;
+		width: 50px;
+		margin-bottom: 20px;
 	}
 	.tnn p {
 		font-size: 30px;
@@ -940,9 +941,9 @@ margin-top: 150px;
 		width: 480px;
 		height: 280px;
 	}
-	.sob img {
+	/*.sob img {
 		width: 400px;
-	}
+	}*/
 	.tnn p {
 		font-size: 25px;
 	}
@@ -1014,9 +1015,9 @@ margin-top: 150px;
 	.contein3 b {
 		font-size: 11px;
 	}
-	.sob img {
+	/*.sob img {
 		width: 300px;
-	}
+	}*/
 	.tnn p {
 		font-size: 15px;
 	}
@@ -1071,9 +1072,9 @@ margin-top: 150px;
 	.emblem_mini img {
 		height: 99px;
 	}
-	.sob img {
+	/*.sob img {
 		width: 200px;
-	}
+	}*/
 	.Form iframe {
 		width: 250px;
 	}
