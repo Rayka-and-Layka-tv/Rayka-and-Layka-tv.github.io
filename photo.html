@@ -87,41 +87,13 @@
 		}
 	</style>
 
-<!-- Принятие куки -->
-<!-- <div class="cookie_notice">
-    Этот сайт использует файлы cookies и сервисы сбора технических данных посетителей для обеспечения работоспособности и улучшения качества обслуживания. Продолжая использовать наш сайт, вы автоматически соглашаетесь с использованием данных технологий.
-    <div>
-        <a class="cookie_btn" id="cookie_close" href="#close">Согласиться</a>
-        <a class="cookie_btn" href="/politica">Политика конфиденциальности</a>
-    </div>
-</div>
-<script>
-function getCookie(name) {
-    let matches = document.cookie.match(new RegExp(
-    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-    ));
-    return matches ? decodeURIComponent(matches[1]) : undefined;
-}
-let cookiecook = getCookie("cookiecook"),
-cookiewin = document.getElementsByClassName('cookie_notice')[0];    
-if (cookiecook != "no") {
-    cookiewin.style.display="block"; 
-    document.getElementById("cookie_close").addEventListener("click", function(){
-        cookiewin.style.display="none";    
-        let date = new Date;
-        date.setDate(date.getDate() + 1);    
-        document.cookie = "cookiecook=no; path=/; expires=" + date.toUTCString();               
-    });
-}
-</script> -->
-<!-- Принятие куки -->
 </head>
 <body>
 	<div class="container">
 		<div class="buttons">
 			<div class="logoo">
-				<img src="/theme/images/Logoreb.png">
-				<p>Интернет-телеканал "Райка and Лайка"</p>
+				<img src="/theme/images/B.png">
+				<p>Интернет-телеканал «Райка and Лайка»</p>
 			  
 			</div>
 		</div>
@@ -133,6 +105,7 @@ if (cookiecook != "no") {
 			<a class="button" href="/reklama"><p>Реклама</p></a>
 			<a class="button" href="/history"><p>Вакансии</p></a>
 			<a class="button" href="/rabota"><p>Стать частью команды</p></a>
+			<a class="button" href="/tele-video"><p>Телепередачи</p></a>
 			<script>/* Когда пользователь нажимает на кнопку,
 переключение между скрытием и отображением раскрывающегося содержимого */
 function myFunction() {
@@ -173,16 +146,553 @@ window.onclick = function(event) {
     </div>
   </footer><!-- /.post-info -->
   <div class="entry-content">
-    <div class="emblem_mini">
-    <a href="/"><img src="/theme/images/NewLogo.png"></a>
-</div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
-<div class="horse">
-    <a class='hr' href="/theme/images/Intro.png" style='background-image: url("/theme/images/Intro.png")'><p>Бурбон</p></a>
-    <a class="hr" href="/theme/images/Grachvr.jpg" style='background-image: url("/theme/images/Grachvr.jpg")'><p>Грач</p></a>
-    <a class="hr" href="/theme/images/Sumrak.jpg" style='background-image: url("/theme/images/Sumrak.jpg")'><p>Сумрак</p></a>
-    <a class="hr" href="/theme/images/Zakazo.jpg" style='background-image: url("/theme/images/Zakazo.jpg")'><p>Заказ</p></a>
-</div>
+        .header {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+        }
+
+        .channel-name {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 107, 107, 0.1);
+            color: #ff6b6b;
+        }
+
+        /* Для основного контента */
+        body {
+            padding-top: 100px;
+        }
+    </style>
+
+<div class="highlight"><pre><span></span><code>&lt;html&gt;
+</code></pre></div>
+
+<p><head>
+    <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <!-- Yandex.Metrika counter --></p>
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(93632025, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/93632025" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">meta</span> <span class="n">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;viewport&quot;</span> <span class="n">content</span><span class="o">=</span><span class="s2">&quot;width=device-width, initial-scale=1&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;yandex-verification&quot;</span> <span class="n">content</span><span class="o">=</span><span class="s2">&quot;d6393e3431b0c435&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">title</span> <span class="o">%</span><span class="p">}</span><span class="err">«</span><span class="n">Райка</span> <span class="ow">and</span> <span class="n">Лайка</span><span class="err">»</span> <span class="o">-</span> <span class="n">интернет</span><span class="o">-</span><span class="n">телеканал</span><span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;icon&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;image/x-icon&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/favicon.ico&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;preconnect&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://fonts.googleapis.com&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;preconnect&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://fonts.gstatic.com&quot;</span> <span class="n">crossorigin</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&amp;display=swap&quot;</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span><span class="nd">@import</span> <span class="n">url</span><span class="p">(</span><span class="s1">&#39;https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap&#39;</span><span class="p">);</span><span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;{{ SITEURL }}/theme/css/index.css&quot;</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;preconnect&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://fonts.googleapis.com&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;preconnect&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://fonts.gstatic.com&quot;</span> <span class="n">crossorigin</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&amp;display=swap&quot;</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;sheet&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="o">&lt;</span><span class="n">link</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css&quot;</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span> <span class="n">integrity</span><span class="o">=</span><span class="s2">&quot;sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH&quot;</span> <span class="n">crossorigin</span><span class="o">=</span><span class="s2">&quot;anonymous&quot;</span><span class="o">&gt;</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span><span class="nd">@import</span> <span class="n">url</span><span class="p">(</span><span class="s1">&#39;https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap&#39;</span><span class="p">);</span><span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+
+
+<span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+    <span class="nd">@font</span><span class="o">-</span><span class="n">face</span> <span class="p">{</span>
+      <span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span> <span class="s1">&#39;fontello&#39;</span><span class="p">;</span>
+      <span class="n">src</span><span class="p">:</span> <span class="n">url</span><span class="p">(</span><span class="s1">&#39;./font/fontello.eot?89923291&#39;</span><span class="p">);</span>
+      <span class="n">src</span><span class="p">:</span> <span class="n">url</span><span class="p">(</span><span class="s1">&#39;./font/fontello.eot?89923291#iefix&#39;</span><span class="p">)</span> <span class="nb">format</span><span class="p">(</span><span class="s1">&#39;embedded-opentype&#39;</span><span class="p">),</span>
+           <span class="n">url</span><span class="p">(</span><span class="s1">&#39;./font/fontello.woff?89923291&#39;</span><span class="p">)</span> <span class="nb">format</span><span class="p">(</span><span class="s1">&#39;woff&#39;</span><span class="p">),</span>
+           <span class="n">url</span><span class="p">(</span><span class="s1">&#39;./font/fontello.ttf?89923291&#39;</span><span class="p">)</span> <span class="nb">format</span><span class="p">(</span><span class="s1">&#39;truetype&#39;</span><span class="p">),</span>
+           <span class="n">url</span><span class="p">(</span><span class="s1">&#39;./font/fontello.svg?89923291#fontello&#39;</span><span class="p">)</span> <span class="nb">format</span><span class="p">(</span><span class="s1">&#39;svg&#39;</span><span class="p">);</span>
+      <span class="n">font</span><span class="o">-</span><span class="n">weight</span><span class="p">:</span> <span class="n">normal</span><span class="p">;</span>
+      <span class="n">font</span><span class="o">-</span><span class="n">style</span><span class="p">:</span> <span class="n">normal</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="o">.</span><span class="n">demo</span><span class="o">-</span><span class="n">icon</span> <span class="p">{</span>
+      <span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span> <span class="s2">&quot;fontello&quot;</span><span class="p">;</span>
+      <span class="n">font</span><span class="o">-</span><span class="n">style</span><span class="p">:</span> <span class="n">normal</span><span class="p">;</span>
+      <span class="n">font</span><span class="o">-</span><span class="n">weight</span><span class="p">:</span> <span class="n">normal</span><span class="p">;</span>
+      <span class="n">speak</span><span class="p">:</span> <span class="n">never</span><span class="p">;</span>
+
+      <span class="n">display</span><span class="p">:</span> <span class="n">inline</span><span class="o">-</span><span class="n">block</span><span class="p">;</span>
+      <span class="n">text</span><span class="o">-</span><span class="n">decoration</span><span class="p">:</span> <span class="n">inherit</span><span class="p">;</span>
+      <span class="n">width</span><span class="p">:</span> <span class="mi">1</span><span class="n">em</span><span class="p">;</span>
+      <span class="n">margin</span><span class="o">-</span><span class="n">right</span><span class="p">:</span> <span class="mf">.2</span><span class="n">em</span><span class="p">;</span>
+      <span class="n">text</span><span class="o">-</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span><span class="p">;</span>
+      <span class="o">/*</span> <span class="n">opacity</span><span class="p">:</span> <span class="mf">.8</span><span class="p">;</span> <span class="o">*/</span>
+
+      <span class="o">/*</span> <span class="n">For</span> <span class="n">safety</span> <span class="o">-</span> <span class="n">reset</span> <span class="n">parent</span> <span class="n">styles</span><span class="p">,</span> <span class="n">that</span> <span class="n">can</span> <span class="k">break</span> <span class="n">glyph</span> <span class="n">codes</span><span class="o">*/</span>
+      <span class="n">font</span><span class="o">-</span><span class="n">variant</span><span class="p">:</span> <span class="n">normal</span><span class="p">;</span>
+      <span class="n">text</span><span class="o">-</span><span class="n">transform</span><span class="p">:</span> <span class="n">none</span><span class="p">;</span>
+
+      <span class="o">/*</span> <span class="n">fix</span> <span class="n">buttons</span> <span class="n">height</span><span class="p">,</span> <span class="k">for</span> <span class="n">twitter</span> <span class="n">bootstrap</span> <span class="o">*/</span>
+      <span class="n">line</span><span class="o">-</span><span class="n">height</span><span class="p">:</span> <span class="mi">1</span><span class="n">em</span><span class="p">;</span>
+
+      <span class="o">/*</span> <span class="n">Animation</span> <span class="n">center</span> <span class="n">compensation</span> <span class="o">-</span> <span class="n">margins</span> <span class="n">should</span> <span class="n">be</span> <span class="n">symmetric</span> <span class="o">*/</span>
+      <span class="o">/*</span> <span class="n">remove</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">needed</span> <span class="o">*/</span>
+      <span class="n">margin</span><span class="o">-</span><span class="n">left</span><span class="p">:</span> <span class="mf">.2</span><span class="n">em</span><span class="p">;</span>
+
+      <span class="o">/*</span> <span class="n">You</span> <span class="n">can</span> <span class="n">be</span> <span class="n">more</span> <span class="n">comfortable</span> <span class="k">with</span> <span class="n">increased</span> <span class="n">icons</span> <span class="n">size</span> <span class="o">*/</span>
+      <span class="o">/*</span> <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">120</span><span class="o">%</span><span class="p">;</span> <span class="o">*/</span>
+
+      <span class="o">/*</span> <span class="n">Font</span> <span class="n">smoothing</span><span class="o">.</span> <span class="n">That</span> <span class="n">was</span> <span class="n">taken</span> <span class="kn">from</span> <span class="nn">TWBS</span> <span class="o">*/</span>
+      <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="n">smoothing</span><span class="p">:</span> <span class="n">antialiased</span><span class="p">;</span>
+      <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">osx</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="n">smoothing</span><span class="p">:</span> <span class="n">grayscale</span><span class="p">;</span>
+
+      <span class="o">/*</span> <span class="n">Uncomment</span> <span class="k">for</span> <span class="mi">3</span><span class="n">D</span> <span class="n">effect</span> <span class="o">*/</span>
+      <span class="o">/*</span> <span class="n">text</span><span class="o">-</span><span class="n">shadow</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="mi">1</span><span class="n">px</span> <span class="mi">1</span><span class="n">px</span> <span class="n">rgba</span><span class="p">(</span><span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">);</span> <span class="o">*/</span>
+    <span class="p">}</span>
+<span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<p></head></p>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <div class="logoo">
+                <img src="{{ SITEURL }}/theme/images/Logoreb.png">
+                <p>Интернет-телеканал «Райка and Лайка»</p>
+
+            </div>
+        </div>
+        <div class="dropdown">
+            <a onclick="myFunction()" class="dropbtn">МЕНЮ</a>
+            <div id="myDropdown" class="dropdown-content">
+            <a class="button" href="/"><p>Главная</p></a>
+            <a class="button" href="/livetv"><p>Прямой эфир</p></a>
+            <a class="button" href="/reklama"><p>Реклама</p></a>
+            <a class="button" href="/history"><p>Вакансии</p></a>
+            <a class="button" href="/rabota"><p>Стать частью команды</p></a>
+            <a class="button" href="/tele-video"><p>Телепередачи</p></a>
+            <script>/* Когда пользователь нажимает на кнопку,
+переключение между скрытием и отображением раскрывающегося содержимого */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Закройте выпадающее меню, если пользователь щелкает за его пределами
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}</script>
+              </div>
+        </div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;podval&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;title2&quot;</span><span class="nt">&gt;</span>
+        <span class="cm">&lt;!-- &lt;p&gt;Реквизиты для финансовой помощи&lt;/p&gt; --&gt;</span>
+<span class="cm">&lt;!--        &lt;p&gt;Номер карты Юмани:&lt;/p&gt;</span>
+<span class="cm">        &lt;p&gt;5106 2180 3937 8336&lt;/p&gt; --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;iframe</span> <span class="na">class=</span><span class="s">&quot;ya&quot;</span> <span class="na">src=</span><span class="s">&quot;https://yandex.ru/sprav/widget/rating-badge/231632381437?type=rating&amp;theme=dark&quot;</span> <span class="na">width=</span><span class="s">&quot;300&quot;</span> <span class="na">height=</span><span class="s">&quot;50&quot;</span> <span class="na">frameborder=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;title2&quot;</span><span class="nt">&gt;&lt;p&gt;</span>Редакция: rayka_and_layka-tv@ro.ru<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span>По всем вопросам: red@ral-tv.ru<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;footer2&quot;</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;sob&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">&quot;/theme/images/LetoRaL2025.png&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;contein3&quot;</span><span class="nt">&gt;&lt;b&gt;</span>© ИПТВ «Райка and Лайка», 2025<span class="nt">&lt;/b&gt;</span>
+            <span class="nt">&lt;p&gt;</span>.<span class="nt">&lt;/p&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+<p></html></p>
+<p><html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<script src="http://code.jquery.com/jquery-1.4.2.min.js"></script></p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;!--</span><span class="w"> </span><span class="n">Yandex</span><span class="p">.</span><span class="n">Metrika</span><span class="w"> </span><span class="kr">counter</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"></span>
+</code></pre></div>
+
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(93632025, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/93632025" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;yandex-verification&quot;</span> <span class="n">content</span><span class="o">=</span><span class="s2">&quot;d6393e3431b0c435&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">title</span> <span class="o">%</span><span class="p">}</span><span class="err">«</span><span class="n">Райка</span> <span class="ow">and</span> <span class="n">Лайка</span><span class="err">»</span> <span class="o">-</span> <span class="n">интернет</span><span class="o">-</span><span class="n">телеканал</span><span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;icon&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;image/x-icon&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;/favicon.ico&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;preconnect&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://fonts.googleapis.com&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;preconnect&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://fonts.gstatic.com&quot;</span> <span class="n">crossorigin</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&amp;display=swap&quot;</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span><span class="nd">@import</span> <span class="n">url</span><span class="p">(</span><span class="s1">&#39;https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap&#39;</span><span class="p">);</span><span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;{{ SITEURL }}/theme/css/index.css&quot;</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;preconnect&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://fonts.googleapis.com&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;preconnect&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://fonts.gstatic.com&quot;</span> <span class="n">crossorigin</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&amp;display=swap&quot;</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;sheet&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="o">&lt;</span><span class="n">link</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css&quot;</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span> <span class="n">integrity</span><span class="o">=</span><span class="s2">&quot;sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH&quot;</span> <span class="n">crossorigin</span><span class="o">=</span><span class="s2">&quot;anonymous&quot;</span><span class="o">&gt;</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span><span class="nd">@import</span> <span class="n">url</span><span class="p">(</span><span class="s1">&#39;https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap&#39;</span><span class="p">);</span><span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<style>
+     * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'MS SANS SERIF', sans-serif;
+     }
+
+    .header {
+     position: fixed;
+     top: 20px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 90%;
+     max-width: 1200px;
+     background: rgba(255, 255, 255, 0.95);
+     border-radius: 30px;
+     padding: 15px 30px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(10px);
+     z-index: 1000;
+     }
+
+    .logo-section {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     }
+
+    .logo {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+     }
+
+    .channel-name {
+     font-size: 1.4em;
+     font-weight: 700;
+     color: #333;
+     }
+
+    .nav-links {
+     display: flex;
+     gap: 25px;
+     }
+
+    .nav-link {
+     text-decoration: none;
+     color: #444;
+     font-weight: 500;
+     padding: 10px 20px;
+     border-radius: 8px;
+     transition: all 0.3s ease;
+     }
+
+    .nav-link:hover {
+     background: rgba(255, 107, 107, 0.1);
+     color: #ff6b6b;
+     }
+
+    /* Мобильная версия */
+    .hamburger {
+     display: none;
+     cursor: pointer;
+     padding: 10px;
+     }
+
+    .bar {
+     width: 25px;
+     height: 3px;
+     background: #333;
+     margin: 5px 0;
+     border-radius: 3px;
+     transition: 0.4s;
+     }
+
+    .mobile-menu {
+     display: none;
+     position: fixed;
+     top: 90px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 90%;
+     background: rgba(255, 255, 255, 0.98);
+     border-radius: 20px;
+     padding: 20px;
+     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+     flex-direction: column;
+     gap: 15px;
+     z-index: 999;
+     }
+
+    .mobile-menu.active {
+     display: flex;
+     }
+
+    .overlay {
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.3);
+     z-index: 998;
+     }
+
+    @media (max-width: 768px) {
+     .header {
+     top: 10px;
+     padding: 12px 20px;
+     }
+
+     .nav-links {
+     display: none;
+     }
+
+     .hamburger {
+     display: block;
+     }
+
+     .channel-name {
+     font-size: 1.2em;
+     }
+
+     .logo {
+     width: 40px;
+     height: 40px;
+     }
+
+     .nav-link {
+     width: 100%;
+     text-align: center;
+     padding: 15px;
+     }
+     }
+
+     @media (max-width: 480px) {
+     .header {
+     width: 95%;
+     border-radius: 25px;
+     }
+
+     .channel-name {
+     display: none;
+     }
+     }
+ </style>
+<style>
+    @font-face {
+      font-family: 'fontello';
+      src: url('./font/fontello.eot?89923291');
+      src: url('./font/fontello.eot?89923291#iefix') format('embedded-opentype'),
+           url('./font/fontello.woff?89923291') format('woff'),
+           url('./font/fontello.ttf?89923291') format('truetype'),
+           url('./font/fontello.svg?89923291#fontello') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .demo-icon {
+      font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      speak: never;
+
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+</style>
+<p></head></p>
+<body>
+ <header class="header">
+ <div class="logo-section">
+ <div class="logo"></div>
+ <span class="channel-name">Райка & Лайка</span>
+ </div>
+
+ <nav class="nav-links">
+ <a href="#" class="nav-link">Главная</a>
+ <a href="#" class="nav-link">Прямой эфир</a>
+ <a href="#" class="nav-link">Телепередачи</a>
+ <a href="#" class="nav-link">Стать частью команды</a>
+ <a href="#" class="nav-link">Вакансии</a>
+ </nav>
+
+ <div class="hamburger" onclick="toggleMenu()">
+ <div class="bar"></div>
+ <div class="bar"></div>
+ <div class="bar"></div>
+ </div>
+ </header>
+
+ <div class="overlay" onclick="toggleMenu()"></div>
+ <div class="mobile-menu">
+ <a href="#" class="nav-link">Главная</a>
+ <a href="#" class="nav-link">Прямой эфир</a>
+ <a href="#" class="nav-link">Телепередачи</a>
+ <a href="#" class="nav-link">Стать частью команды</a>
+ <a href="#" class="nav-link">Вакансии</a>
+ </div>
+
+ <!-- Остальной контент страницы -->
+ <script>
+ function toggleMenu() {
+ const hamburger = document.querySelector('.hamburger');
+ const mobileMenu = document.querySelector('.mobile-menu');
+ const overlay = document.querySelector('.overlay');
+
+ hamburger.classList.toggle('active');
+ mobileMenu.classList.toggle('active');
+ overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+
+ // Анимация гамбургера
+ if (hamburger.classList.contains('active')) {
+ hamburger.children[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
+ hamburger.children[1].style.opacity = '0';
+ hamburger.children[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
+ } else {
+ hamburger.children[0].style.transform = 'none';
+ hamburger.children[1].style.opacity = '1';
+ hamburger.children[2].style.transform = 'none';
+ }
+ }
+ </script>
+</body>
+<p></div>
+        </div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+    <div class="podval">
+        <div class="title2">
+            <!-- <p>Реквизиты для финансовой помощи</p> -->
+    <!--        <p>Номер карты Юмани:</p>
+            <p>5106 2180 3937 8336</p> -->
+        </div>
+            <iframe class="ya" src="https://yandex.ru/sprav/widget/rating-badge/231632381437?type=rating&theme=dark" width="300" height="50" frameborder="0"></iframe>
+        <div class="title2"><p>Редакция: rayka_and_layka-tv@ro.ru</p>
+            <p>По всем вопросам: red@ral-tv.ru</p>
+        </div>
+        <div class="footer2">
+             <div class="sob">
+                  <a href=""><img src="/theme/images/LetoRaL2025.png"></a>
+             </div>
+            <div class="contein3"><b>© ИПТВ «Райка and Лайка», 2025</b>
+                <p>.</p></div>
+        </div>
+    </div>
+</html></p>
   </div><!-- /.entry-content -->
 </section>
 	</div>
@@ -194,15 +704,17 @@ window.onclick = function(event) {
 			<p>5106 2180 3937 8336</p> -->
 		</div>
 			<iframe class="ya" src="https://yandex.ru/sprav/widget/rating-badge/231632381437?type=rating&theme=dark" width="300" height="50" frameborder="0"></iframe>
-		<div class="title2"><p>Электронная почта редакции: rayka_and_layka-tv@ro.ru</p>
-			<p>По всем вопросам: raika.official@yandex.ru</p>
+		<div class="title2"><p>Редакция: red@ral-tv.ru</p>
+			<p>По всем вопросам: rayka_and_layka-tv@ro.ru</p>
 		</div>
 		<div class="footer2">
 		     <div class="sob">
-		          <a href="https://vk.com/motion.deru"><img src="/theme/images/Motion Deru1.png"></a>
+		          <a href=""><img src="/theme/images/Logorebb.png"></a>
 		     </div>
-		    <div class="contein3"><b>© Интернет-телеканал "Райка and Лайка"</b>
+		    <div class="contein3"><b>© ИПТВ «Райка and Лайка», 2025</b>
 		    	<p>.</p></div>
 		</div>
 	</div>
 </html>
+
+
