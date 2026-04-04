@@ -1269,6 +1269,47 @@ margin-top: 150px;
 	animation: tag-hover 0.8s ease-out forwards, tag-swing-hover 3s 0.8s ease-in-out infinite;
 }
 
+
+/*Для тега СКОРО*/
+.program-tagS {
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  background: linear-gradient(45deg, #2d59faf7, #46def2f7);
+  color: white;
+  padding: 6px 18px;
+  border-radius: 25px;
+  font-size: 13px;
+  z-index: 3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: rotate(8deg) translateY(-5px);
+  transform-origin: 100% 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  animation: tag-entry 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid rgba(255,255,255,0.15);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  animation: tag-entry 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), tag-swing 4s 0.6s ease-in-out infinite;
+}
+.tnn1:hover .program-tagS {
+	animation: tag-hover 0.8s ease-out forwards, tag-swing-hover 3s 0.8s ease-in-out infinite;
+}
+/*Конец тега СОКРО*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
   .program-tag {
     padding: 5px 14px;
