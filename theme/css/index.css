@@ -84,14 +84,14 @@ font-family: 'Moscow Sans', arial;
 .description1 {
 	background-color: #bbb1;
 	padding: 1em;
-	border-radius: 88px;
+	border-radius: 66px;
 	margin-top: 38px;
 	margin-bottom: 50px;
 	margin-left: 10%;
 	margin-right: 10%;
 }
 .description1 p {
-	text-align: 10px;
+	text-align: 9px;
 	font-size: 1.1vw;
 }
 
@@ -401,21 +401,21 @@ form .Footer {
 	text-align: left;
 }
 
+.sobb {
+	text-align: center;
+	cursor: pointer;
+	
+}
+.sobb img {
+	width: 350px;
+	border-radius: 12px;
+}
 .sob {
 	text-align: center;
 	cursor: pointer;
 	
 }
 .sob img {
-	width: 350px;
-	border-radius: 12px;
-}
-.sobPODVAL {
-	text-align: center;
-	cursor: pointer;
-	
-}
-.sobPODVAL img {
 	width: 80px;
 }
 
@@ -858,6 +858,9 @@ margin-top: 150px;
 	.Opros {
 	margin: 0px 0px 0px 0px;
 	}
+	html {
+		font-size: 20px;
+	}
 }
 @media only screen and (max-width: 1067px) {
 	.buttons {
@@ -866,7 +869,7 @@ margin-top: 150px;
 }
 @media only screen and (max-width: 920px) {
 	html {
-		font-size: 20px;
+		font-size: 14px;
 	}
 	.header .emblem img {
 		height: 200px;
@@ -874,11 +877,11 @@ margin-top: 150px;
 	.emblem_mini img {
 		height: 150px;
 	}
-	.sob img {
+	.sobb img {
 		width: 300px;
 		margin-bottom: 20px;
 	}
-	.sobPODVAL img {
+	.sob img {
 		width: 50px;
 	}
 	.tnn p {
@@ -914,6 +917,9 @@ margin-top: 150px;
 	}
 	.vik iframe {
 		width: 450px;
+	}
+	.ob h1 {
+		font-size: 20px;
 	}
 }
 @media only screen and (max-width: 612px) {
@@ -961,6 +967,9 @@ margin-top: 150px;
 	.tnn p {
 		font-size: 25px;
 	}
+	.ob h1 {
+		font-size: 15px;
+	}
 }
 @media only screen and (max-width: 573px) {
 	.header .title p {
@@ -1003,7 +1012,7 @@ margin-top: 150px;
 		display: block;
 	}
 	.ob p {
-		font-size: 20px;
+		font-size: 10px;
 	}
 	.buttons {
 		width: 100%;
@@ -1029,7 +1038,7 @@ margin-top: 150px;
 	.contein3 b {
 		font-size: 11px;
 	}
-	.sob img {
+	.sobb img {
 		width: 280px;
 		margin-top: 30px;
 		margin-bottom: 1px;
@@ -1050,7 +1059,7 @@ margin-top: 150px;
 		font-size: 20px;
 	}
 	.title2 p {
-		font-size: 20px;
+		font-size: 12px;
 	}
 	.vid img {
 	max-width: 200px;
@@ -1067,6 +1076,10 @@ margin-top: 150px;
 	}
 	.title1 p {
 		font-size: 12px;
+	}
+	.description1 {
+		margin-right: 2%;
+		margin-left: 2px;
 	}
 }
 @media only screen and (max-width: 383px) {
@@ -1088,7 +1101,7 @@ margin-top: 150px;
 	.emblem_mini img {
 		height: 99px;
 	}
-	.sob img {
+	.sobb img {
 		width: 220px;
 	}
 	.Form iframe {
