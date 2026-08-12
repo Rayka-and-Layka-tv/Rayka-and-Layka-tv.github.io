@@ -1,0 +1,1058 @@
+/* =========================================
+   1. КОНТЕЙНЕР СПИСКА И КАРТОЧКИ (ОБНОВЛЁННЫЕ)
+   ========================================= */
+
+.program-list {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    margin-bottom: 330px;
+}
+
+.program-card {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    
+    /* Чистый белый фон карточки на светло-сером фоне сайта */
+    background-color: #ffffff; 
+    border-radius: 16px;
+    
+    /* Тонкая серая рамка + легкая тень */
+    border: 1px solid #eef0f2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.program-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border-color: #dfe4e9;
+}
+
+/* АКЦЕНТ: Красная линия снизу (связывает дизайн с кнопкой "Назад") */
+.program-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ff4d4d; /* Тот самый красный цвет */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+.program-card:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Стили для изображения */
+.program-image {
+    width: 180px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-right: 24px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.program-card:hover .program-image {
+    transform: scale(1.02);
+}
+
+/* Текстовый блок */
+.program-info {
+    flex-grow: 1;
+    min-width: 0; /* Критично для переноса текста внутри flex */
+}
+
+.program-title {
+    margin: 0 0 8px 0;
+    color: #1a1a1a;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.program-description {
+    margin: 0;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* --- АДАПТИВНОСТЬ ДЛЯ КАРТОЧЕК --- */
+@media (max-width: 768px) {
+    .program-list {
+        padding: 0 15px;
+        margin: 30px auto;
+    }
+
+    .program-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .program-image {
+        width: 100%;
+        height: 220px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        border-radius: 12px;
+    }
+
+    .program-title {
+        font-size: 18px;
+    }
+
+    .program-description {
+        font-size: 14px;
+        line-height: 1.6;
+        -webkit-line-clamp: 4;
+    }
+}
+
+@media (max-width: 480px) {
+    .program-card {
+        margin: 15px 0;
+        padding: 15px;
+    }
+    
+    .program-title {
+        font-size: 17px;
+    }
+    
+    .program-description {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================
+   2. СТИЛИ ИЗ ФАЙЛА ТЕМАТОВ
+   ========================================= */
+
+.meta-info {
+  margin: 10px 0;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+}
+
+
+.premiere-date, .company-address, .program-genre {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 19px;
+  color: #555;
+}
+
+.icon {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+.text {
+  flex: 1;
+}
+
+/* Адаптивность для мета-информации */
+@media (max-width: 480px) {
+  .meta-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .premiere-date .text, 
+  .company-address .text {
+    word-break: break-word;
+  }
+}
+
+
+/* =========================================
+   3. СТИЛИ ДЛЯ ТЕГОВ И АНИМАЦИИ (СОХРАНЕНЫ И ДОРАБОТАНЫ)
+   ========================================= */
+
+/* Позиционирование тега внутри карточки */
+.program-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff4d4d;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    animation: tag-entry 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), tag-swing 4s 0.6s ease-in-out infinite;
+}
+.program-tagS {
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    background: linear-gradient(45deg, #2d59faf7, #46def2f7);
+    color: white;
+    padding: 6px 18px;
+    border-radius: 25px;
+    font-size: 13px;
+    z-index: 4;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: rotate(8deg) translateY(-5px);
+    transform-origin: 100% 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    /*animation: tag-entry 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);*/
+    border: 1px solid rgba(255,255,255,0.15);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    animation: tag-entry 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), tag-swing 4s 0.6s ease-in-out infinite;
+}
+
+/* Анимация качания для мобильных (из твоего кода) */
+@media (max-width: 768px) {
+  .program-tag {
+      padding: 5px 14px;
+      font-size: 12px;
+      /* Убираем старый transform здесь, чтобы анимация работала корректно */
+  }
+  .program-tagS {
+      padding: 5px 14px;
+      font-size: 12px;
+      /* Убираем старый transform здесь, чтобы анимация работала корректно */
+  }
+  
+  /* Если нужно, чтобы тег качался только при наведении на карточку: */
+  .tnn1:hover .program-tag {
+      animation: tag-swing-mobile 1s infinite ease-in-out;
+  }
+
+  @keyframes tag-swing-mobile {
+      0%, 100% { transform: rotate(5deg) translateY(-3px); }
+      50% { transform: rotate(-5deg) translateY(-5px); }
+  }
+}
+
+
+/* =========================================
+   4. СТИЛИ МОДАЛЬНОГО ОКНА (БАЗОВЫЕ)
+   ========================================= */
+
+.modal-header {
+  margin-bottom: 20px;
+  padding: 0 15px;
+  margin-top: 20px;
+}
+
+.modal-title {
+  color: #1a1a1a;
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Акцентная линия под заголовком (в стиле красной обводки кнопки «Назад») */
+.modal-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff4d4d;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.modal-description {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.modal-description-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.modal-description-wrapper {
+    padding: 16px;
+    background: #f9f9f9;
+    border: 1px solid #eef0f2;
+    border-radius: 8px;
+}
+
+.video-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    width: 80%;
+    max-width: 900px;
+    margin: 2% auto;
+    padding: 30px;
+    border-radius: 12px;
+    z-index: 1002;
+    animation: modalAppear 0.3s ease-out;
+    display: flex; 
+    flex-direction: column; 
+    height: calc(90vh - 40px); 
+    max-height: 95vh;
+    overflow-y: auto;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+}
+
+.video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.close-modal {
+  position: absolute;
+  top: 5px;
+  right: 9px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.close-modal:hover {
+  color: #000;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*===================Конец из файла Тематов=======================*/
+
+
+/*Кнопка*/
+
+/* --- БАЗОВЫЕ СТИЛИ (Десктоп) --- */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-left: 10%;
+  
+  /* Чёрная заливка */
+  background-color: #1a1a1a; 
+  color: #ffffff;
+  
+  /* Красная обводка */
+  border: 2px solid #ff4d4d; 
+  
+  padding: 12px 24px; /* Стандартные отступы для ПК */
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  text-decoration: none; /* На случай, если вдруг обернёте в ссылку */
+}
+
+.back-button:hover {
+  background-color: #333;
+  border-color: #ff0000;
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.4);
+  transform: translateY(-2px);
+}
+
+.back-button:active {
+  background-color: #000;
+  border-color: #cc0000;
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.back-button .icon {
+  display: block;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.35s cubic-bezier(0.17, 0.67, 0.19, 0.99), color 0.2s ease;
+  will-change: transform;
+}
+
+.back-button:hover .icon {
+  transform: translateX(-6px) translateY(-2px) scale(1.1);
+  color: #ff4d4d;
+}
+
+.zag h3 {
+    margin-top: 200px;
+    margin-left: 10%;
+    font-size: 28px;
+}
+.zag h2 {
+    margin-top: 50px;
+    margin-left: 10%;
+    font-size: 25px;
+}
+
+/* --- АДАПТАЦИЯ ПОД МОБИЛЬНЫЕ УСТРОЙСТВА --- */
+@media (max-width: 768px) {
+  .back-button {
+    width: 100%;           /* Растягиваем на всю ширину родителя */
+    box-sizing: border-box;/* Чтобы padding не ломал ширину */
+    margin-left: 0%;
+    padding: 16px 20px;    /* Увеличиваем высоту кнопки (минимум 44px) */
+    border-radius: 16px;   /* Сильнее скругляем углы для мобильного UI */
+    
+    font-size: 17px;       /* Чуть крупнее текст для удобства чтения */
+    justify-content: flex-start; /* Текст и стрелка прижаты к левому краю (как в нативных приложениях) */
+  }
+  
+  .back-button .text {
+    /* Можно добавить отступ слева для текста, если нужно, но gap обычно хватает */
+  }
+  .zag h3 {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    margin-left: 0%;
+    margin-bottom: 60px;
+    font-size: 20px;
+}
+  .zag h2 {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-left: 0%;
+    margin-bottom: 60px;
+    font-size: 18px;
+}
+}
+/*Кнопка конец*/
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Расстояние между иконкой и текстом */
+    background-color: #e53935; /* фирменный красный цвет */
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.share-btn:hover {
+    background-color: #b7262a; /* Чуть темнее при наведении */
+}
+
+/* Скрываем кнопку, если модалка закрыта (на всякий случай) */
+/*.video-modal:not(:target) .share-btn {
+    display: none;
+}*/
+
+.copy-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-size: 14px;
+    z-index: 9999; /* Чтобы было поверх всего */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none; /* Чтобы не мешал кликам */
+}
+
+.copy-notification.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.share-btn svg {
+    fill: white !important; /* Принудительно белый цвет */
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+/* =========================================
+   5. АДАПТИВНЫЕ СТИЛИ МОДАЛЬНОГО ОКНА: УМЕНЬШЕННЫЕ ШРИФТЫ НА МОБИЛЬНЫХ
+   ========================================= */
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 94%;
+        margin: 4% auto;
+        padding: 20px;
+    }
+
+    .modal-title {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .premiere-date, .company-address {
+        font-size: 14px;
+    }
+
+    .modal-title::after {
+        width: 48px;
+    }
+
+    .modal-description {
+        font-size: 16px;
+        line-height: 1.55;
+        margin-bottom: 18px;
+    }
+
+    .modal-description-wrapper {
+        padding: 14px;
+    }
+
+    /* Уменьшаем шрифт meta-info на планшетах, но не меньше 14px */
+    #dynamic-meta-info {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 92%;
+        margin: 6% auto;
+        padding: 16px;
+    }
+
+    .modal-title {
+        font-size: 20px;
+        line-height: 1.35;
+    }
+
+    .modal-title::after {
+        width: 40px;
+    }
+
+    .modal-description {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
+
+    .modal-description-wrapper {
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    /* На самых маленьких экранах — 14px, это минимум */
+    #dynamic-meta-info {
+        font-size: 14px;
+    }
+}
+
+
+/*==========================================================================================*/
+.logo-section {
+ display: flex;
+ align-items: center;
+ gap: 15px;
+ background: #0000000c;
+ }
+
+.logo-section img {
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: auto;
+}
+@media only screen and (max-width: 576px) {
+    .logo-section img {
+        height: 55px;
+    }
+}
+
+.entry-content {
+    margin-bottom: 200px;
+}
+
+.ob iframe {
+    display: flex;
+    max-width: 500px;
+    margin-left: 20%;
+}
+@media only screen and (max-width: 636px) {
+    .ob iframe {
+        margin-left: 3%;
+        max-height: 510px;
+        max-width: 450px;
+    }
+}
+
+
+
+/* Базовые стили секции карусели */
+.tv-carousel-section {
+  background-color: #1f2528;
+  margin-top: 20px;
+  padding: 50px 20px;
+  border-top: 1px solid #333a3d;
+}
+
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Заголовок секции (не трогаем — он вне карточки) */
+.carousel-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.carousel-title {
+  color: #e4f1f8;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+.carousel-subtitle {
+  color: #a9b8c0;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Обёртка карусели */
+.carousel-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 24px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Скрываем скроллбар */
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.carousel-wrapper {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+/* Ширина карточек (4 на ПК) */
+.carousel-slide {
+  flex: 0 0 auto;
+  width: calc((100% - (3 * 24px)) / 4);
+  min-width: calc((100% - (3 * 24px)) / 4);
+  scroll-snap-align: start;
+}
+
+/* Карточка */
+.carousel-card {
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  background: #0f1113;
+  border: 1px solid #2a3034;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  padding: 16px; /* Прослойка по периметру карточки */
+  box-sizing: border-box;
+}
+
+.carousel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-color: #4a555d;
+}
+
+/* Фон всей карточки */
+.carousel-bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Затемнение */
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8));
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Обёртка верхнего изображения — делаем меньше, чем карточка */
+.carousel-top-image-wrapper {
+  width: 99%;             /* Чуть уже карточки → прослойка по бокам */
+  aspect-ratio: 16 / 9;   /* Строго 16:9 */
+  margin: 0 auto;         /* Центрируем по горизонтали */
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  background: #000;       /* Цвет заглушки, пока картинка грузится */
+  border-radius: 8px;     /* Опционально: скругление картинки */
+  margin-top: 21px;
+  box-shadow: 0 0 15px rgb(255, 77, 77, 0.85);
+}
+
+.carousel-top-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* Заполняет блок без искажений */
+  object-position: center;
+}
+
+/* Контент поверх всего */
+.carousel-content {
+  position: absolute;
+  /*inset: 0;*/
+  padding: 24px 20px;      /* Отступы контента, чтобы не наезжал на картинку */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 4;
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+
+/* ЛОГИКА: Если картинки НЕТ, растягиваем контент на всю карточку */
+/* :has() проверяет, есть ли внутри .carousel-card элемент .carousel-top-image-wrapper */
+.carousel-card:not(:has(.carousel-top-image-wrapper)) .carousel-content {
+  
+  /* Если нужно, чтобы фон был виден равномерно, можно добавить полупрозрачный слой */
+  background: rgba(0, 0, 0, 0.2); 
+  border-radius: 14px;       /* Скругление под карточку */
+  margin: 0;                 /* Убираем лишние отступы */
+  padding: 40px 20px;        /* Чуть больше воздуха для текста без картинки */
+}
+
+
+
+
+@media (max-width: 768px) {
+  .carousel-card {
+    height: 360px;
+  }
+}
+@media (max-width: 480px) {
+  .carousel-card {
+    height: 320px;
+  }
+  .carousel-title-card { font-size: 15px; }
+  .carousel-desc { font-size: 11px; }
+}
+
+
+.carousel-card-placeholder {
+  cursor: default;
+  pointer-events: none;
+  background: #1a1e21;
+  border-color: #2a3034;
+}
+.carousel-card-placeholder:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Изображение и затемнение */
+.carousel-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8));
+  z-index: 2;
+}
+
+/* Контент карточки */
+.carousel-content {
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+/* Бейдж категории — чуть компактнее */
+.carousel-badge {
+  font-size: 10px;              /* было 11px */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 9px;             /* чуть меньше отступы */
+  border-radius: 6px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  align-self: flex-start;
+  margin-bottom: 8px;
+}
+
+/* Заголовок карточки — уменьшен */
+.carousel-title-card {
+  color: #ffffff;
+  font-size: 17px;              /* было 19px */
+  line-height: 1.35;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+/* Описание — уменьшен и чуть плотнее */
+.carousel-desc {
+  color: #c5d2db;
+  font-size: 10px;              /* было 13px */
+  line-height: 1.4;
+  margin: 0;
+}
+.carousel-desc p {
+    font-size: 9px;
+}
+
+/* Бейдж ПРЕМЬЕРА — тоже чуть компактнее */
+.carousel-badge-premiere {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 6px 12px;            /* было 6px 14px */
+  background: #ff4d4d;
+  color: #fff;
+  font-weight: 700;
+  font-size: 11px;              /* было 12px */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 77, 77, 0.4);
+  z-index: 4;
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Навигация */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 28px 0 40px 0;
+}
+
+.carousel-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #a9b8c0;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0 10px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+.carousel-btn:hover,
+.carousel-btn:focus {
+  color: #e4f1f8;
+}
+.carousel-btn:disabled {
+  color: #5a646a;
+  cursor: not-allowed;
+}
+
+/* Точки */
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  background: #3a4448;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.carousel-dot.active {
+  background: #ff4d4d;
+  transform: scale(1.3);
+}
+
+/* CTA кнопка */
+.carousel-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 40px;
+  background-color: #ff4d4d;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(255, 77, 77, 0.35);
+  transition: all 0.3s ease;
+  justify-content: center;
+  margin: 0 auto;
+}
+.carousel-cta-btn:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.03);
+  box-shadow: 0 12px 32px rgba(255, 77, 77, 0.45);
+}
+.arrow-right {
+  transition: transform 0.3s ease;
+}
+.carousel-cta-btn:hover .arrow-right {
+  transform: translateX(6px);
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+  .carousel-slide {
+    width: calc((100% - (2 * 24px)) / 3);
+    min-width: calc((100% - (2 * 24px)) / 3);
+  }
+}
+@media (max-width: 768px) {
+  .carousel-slide {
+    width: calc((100% - 24px) / 2);
+    min-width: calc((100% - 24px) / 2);
+  }
+  /* На планшетах можно ещё чуть уменьшить шрифты внутри карточки */
+  .carousel-title-card { font-size: 16px; }
+  .carousel-desc     { font-size: 11px; }
+  .carousel-badge    { font-size: 9px; padding: 3px 8px; }
+}
+@media (max-width: 480px) {
+  .carousel-slide {
+    width: 100%;
+    min-width: 100%;
+  }
+  .carousel-controls { gap: 12px; }
+  /* На мобильных — максимально компактно */
+  .carousel-title-card { font-size: 15px; }
+  .carousel-desc     { font-size: 11px; line-height: 1.35; }
+  .carousel-badge    { font-size: 9px; padding: 3px 7px; }
+  .carousel-badge-premiere { font-size: 10px; padding: 5px 10px; }
+}
+
+
+/* Возрастная метка на карточке */
+.age-rating {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  /*background-color: #ff4d4d;*/
+  background: linear-gradient(145deg, #000000 40%, #ff4d4d 50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* чуть темнее, чтобы сочеталось с чёрным */
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 10;
+
+  /* Ярко-красная обводка */
+  /*border: 2px solid #f00;*/
+  box-shadow: 0 0 15px rgb(255, 77, 77, 0.75);
+  white-space: nowrap;
+}
+
+/* Адаптив: на мобильных чуть крупнее и чуть ниже */
+@media (max-width: 768px) {
+  .age-rating {
+    top: 20px;
+    right: 20px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+м
