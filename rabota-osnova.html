@@ -32,6 +32,11 @@
 	<style>@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');</style>
 
 	<link rel="stylesheet" href="/theme/css/index.css">
+	<link rel="stylesheet" href="/theme/css/stil.css">
+	<!-- <link rel="stylesheet" href="/theme/css/ind.css"> -->
+
+	<script src="/theme/js/back-button.js"></script>
+	<script src="/theme/js/carousel.js"></script>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,48 +91,9 @@
 		  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 		}
 	</style>
-
 </head>
 <body>
-	<div class="container">
-		<div class="buttons">
-			<div class="logoo">
-				<img src="/theme/images/B.png">
-				<p>Интернет-телеканал «Райка»</p>
-			  
-			</div>
-		</div>
-		<div class="dropdown">
-			<a onclick="myFunction()" class="dropbtn">МЕНЮ</a>
-			<div id="myDropdown" class="dropdown-content">
-			<a class="button" href="/"><p>Главная</p></a>
-			<a class="button" href="/livetv"><p>Прямой эфир</p></a>
-			<a class="button" href="/reklama"><p>Реклама</p></a>
-			<a class="button" href="/history"><p>Вакансии</p></a>
-			<a class="button" href="/rabota"><p>Стать частью команды</p></a>
-			<a class="button" href="/tele-video"><p>Телепередачи</p></a>
-			<script>/* Когда пользователь нажимает на кнопку,
-переключение между скрытием и отображением раскрывающегося содержимого */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Закройте выпадающее меню, если пользователь щелкает за его пределами
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}</script>
-			  </div>
-		</div>
-<section id="content" class="body">
+	<main><section id="content" class="body">
   <header>
     <h2 class="entry-title">
       <a href="/rabota-osnova" rel="bookmark"
@@ -146,32 +112,134 @@ window.onclick = function(event) {
     </div>
   </footer><!-- /.post-info -->
   <div class="entry-content">
-    <div class="emblem_mini">
-    <a href="/"><img src="/theme/images/B.png"></a>
-</div>
-<p><a class='Back' href='/rabota'>Назад</a></p>
+    <body class="clips">
+<div class='zag'><h3>Основной отдел</h3></div>
+
+<button type="button" class="back-button" id="backBtn">
+  <span class="icon">←</span>
+  <span class="text">Назад</span>
+</button>
 <div class='Form'>
     <script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script><iframe src="https://forms.yandex.ru/u/650dd11d90fa7bbb46737e8d/?iframe=1" frameborder="0" name="ya-form-650dd11d90fa7bbb46737e8d" width="650"></iframe>
 </div>
 <p class="politica">Вы можете ознакомиться с <a href="/politica">Политикой в отношении обработки персональных данных</a></p>
   </div><!-- /.entry-content -->
 </section>
+</main>
+	<div class="buttons">
+		<header class="headerr">
+			<div class="logo-section">
+				<img src="/theme/images/B.png">
+				<span class="channel-name">Интернет-телеканал «Райка»</span>
+			</div>
+
+			<nav class="nav-links">
+				<a href="/" class="nav-link">Главная</a>
+				<a href="/livetv" class="nav-link">Прямой эфир</a>
+				<a href="/tele-video" class="nav-link">Телепередачи</a>
+				<a href="/history" class="nav-link">Стать частью команды</a>
+				<!-- <a href="#" class="nav-link">Вакансии</a> -->
+			</nav>
+
+			<div class="hamburger" onclick="toggleMenu()">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+			</header>
+
+			<div class="overlay" onclick="toggleMenu()"></div>
+			<div class="mobile-menu">
+				<a href="/" class="nav-link">Главная</a>
+				<a href="/livetv" class="nav-link">Прямой эфир</a>
+				<a href="/tele-video" class="nav-link">Телепередачи</a>
+				<a href="/history" class="nav-link">Стать частью команды</a>
+				<!-- <a href="#" class="nav-link">Вакансии</a> -->
+			</div>
+
 	</div>
-</body>
-	<div class="podval">
+	<footer class="podval">
 		<div class="title2">
 		</div>
 			<iframe class="ya" src="https://yandex.ru/sprav/widget/rating-badge/231632381437?type=rating&theme=dark" width="300" height="50" frameborder="0"></iframe>
 		<div class="title2"><p>Редакция: red@ral-tv.ru</p>
+			<a href="/rabota">Стать частью команды</a>
 		</div>
 		<div class="footer2">
 		     <div class="sob">
 		          <a href=""><img src="/theme/images/Logorebb.png"></a>
 		     </div>
-		    <div class="contein3"><b>© ИПТВ «Райка», 2026</b>
-		    	<p>.</p></div>
+		    <div class="contein3"><b>© ИПТВ «Райка», 2026</b></div>
 		</div>
+	</footer>
+
+
+
+		<div class="container">
+
+	 <!-- Остальной контент страницы -->
+	 <script>
+	 function toggleMenu() {
+	 const hamburger = document.querySelector('.hamburger');
+	 const mobileMenu = document.querySelector('.mobile-menu');
+	 const overlay = document.querySelector('.overlay');
+	 
+	 hamburger.classList.toggle('active');
+	 mobileMenu.classList.toggle('active');
+	 overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+	 
+	 // Анимация гамбургера
+	 if (hamburger.classList.contains('active')) {
+	 hamburger.children[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
+	 hamburger.children[1].style.opacity = '0';
+	 hamburger.children[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
+	 } else {
+	 hamburger.children[0].style.transform = 'none';
+	 hamburger.children[1].style.opacity = '1';
+	 hamburger.children[2].style.transform = 'none';
+	 }
+	 }
+	 </script>
+				<!-- <div class="logoo">
+					<img src="/theme/images/B.png">
+					<p>Интернет-телеканал «Райка»</p>
+				  
+				</div>
+			</div>
+			<div class="dropdown">
+				<a onclick="myFunction()" class="dropbtn">МЕНЮ</a>
+				<div id="myDropdown" class="dropdown-content">
+				<a class="button" href="/"><p>Главная</p></a>
+				<a class="button" href="/livetv"><p>Прямой эфир</p></a>
+				<a class="button" href="/reklama"><p>Реклама</p></a>
+				<a class="button" href="/history"><p>Вакансии</p></a>
+				<a class="button" href="/rabota"><p>Стать частью команды</p></a>
+				<a class="button" href="/tele-video"><p>Телепередачи</p></a> -->
+				<script> /* Когда пользователь нажимает на кнопку,
+	переключение между скрытием и отображением раскрывающегося содержимого */
+	// function myFunction() {
+	//   document.getElementById("myDropdown").classList.toggle("show");
+	// }
+
+	// Закройте выпадающее меню, если пользователь щёлкает за его пределами
+	// window.onclick = function(event) {
+	//   if (!event.target.matches('.dropbtn')) {
+	//     var dropdowns = document.getElementsByClassName("dropdown-content");
+	//     var i;
+	//     for (i = 0; i < dropdowns.length; i++) {
+	//       var openDropdown = dropdowns[i];
+	//       if (openDropdown.classList.contains('show')) {
+	//         openDropdown.classList.remove('show');
+	//       }
+	//     }
+	//   }
+	// }
+				</script>
+				  </div>
+		</div>
+		
 	</div>
+</body>
 </html>
 
 

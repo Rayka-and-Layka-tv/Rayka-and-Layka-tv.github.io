@@ -32,6 +32,11 @@
 	<style>@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');</style>
 
 	<link rel="stylesheet" href="/theme/css/index.css">
+	<link rel="stylesheet" href="/theme/css/stil.css">
+	<!-- <link rel="stylesheet" href="/theme/css/ind.css"> -->
+
+	<script src="/theme/js/back-button.js"></script>
+	<script src="/theme/js/carousel.js"></script>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,48 +91,9 @@
 		  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 		}
 	</style>
-
 </head>
 <body>
-	<div class="container">
-		<div class="buttons">
-			<div class="logoo">
-				<img src="/theme/images/B.png">
-				<p>Интернет-телеканал «Райка»</p>
-			  
-			</div>
-		</div>
-		<div class="dropdown">
-			<a onclick="myFunction()" class="dropbtn">МЕНЮ</a>
-			<div id="myDropdown" class="dropdown-content">
-			<a class="button" href="/"><p>Главная</p></a>
-			<a class="button" href="/livetv"><p>Прямой эфир</p></a>
-			<a class="button" href="/reklama"><p>Реклама</p></a>
-			<a class="button" href="/history"><p>Вакансии</p></a>
-			<a class="button" href="/rabota"><p>Стать частью команды</p></a>
-			<a class="button" href="/tele-video"><p>Телепередачи</p></a>
-			<script>/* Когда пользователь нажимает на кнопку,
-переключение между скрытием и отображением раскрывающегося содержимого */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Закройте выпадающее меню, если пользователь щелкает за его пределами
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}</script>
-			  </div>
-		</div>
-<section id="content" class="body">
+	<main><section id="content" class="body">
   <header>
     <h2 class="entry-title">
       <a href="/Temat" rel="bookmark"
@@ -147,97 +113,379 @@ window.onclick = function(event) {
   </footer><!-- /.post-info -->
   <div class="entry-content">
     <body class="clips">
-<div class="emblem_mini">
-    <a href="/"><img src="/theme/images/B.png"></a>
-</div>
+<div class='zag'><h3>Тематические телепередачи</h3></div>
+
+<button type="button" class="back-button" id="backBtn">
+  <span class="icon">←</span>
+  <span class="text">Назад</span>
+</button>
 
 <div class="program-list">
-    <!-- Карточка передачи 1 -->
-    <div class="program-card">
-        <!-- <div class="program-tag">Новый эпизод</div> -->
-        <img src="/theme/images/Dom.png" alt="Тематические" class="program-image">
-        <div class="program-info">
-            <h3 class="program-title">Дом забытых вещей</h3>
-            <p class="program-description">Первая телепередача нового проекта «Тематические телепередачи». В ней рассказываем про замечательное место в Москве, а также включён рассказ про историю и Ходынскую давку!</p>
-        </div>
-    </div>
-    <!-- Добавляем это перед закрывающим тегом </body> -->
-    <div class="video-modal" id="videoModal">
-      <div class="modal-overlay"></div>
-      <div class="modal-content">
-        <button class="close-modal">&times;</button>
-        <div class="video-wrapper">
-            <iframe controls class="video-player" width="720" height="405" src="https://rutube.ru/play/embed/c0c7f578b2931f59c5ee20ccd915d854/?skinColor=e53935" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-        </div>
-        <!-- Добавленные текстовые элементы -->
-        <div class="modal-header">
-          <h2 class="modal-title">Дом забытых вещей</h2>
-          <p class="modal-description">«Дом забытых вещей» в <a href="https://vk.com/club214313793" target="_blank"><i class="demo-icon icon-link-ext">&#xf08e;</i><font color='red'>галерее-музее «Память»</font></a> - первая телепередача нового проекта «Тематические телепередачи». В ней рассказываем про замечательное место в Москве, а также включён рассказ про историю и Ходынскую давку!<br>
-          «Тематические телепередачи» – это шанс для компаний, спортивных клубов, школ и частных лиц представить себя аудитории через ИПТВ «Райка and Лайка».<br>
-          Сюжеты создаются совместно с нашими редакторами.<br><br>Для получения дополнительной информации свяжитесь с <a href="https://vk.com/rayka_and_layka_new" target="_blank"><i class="demo-icon icon-link-ext">&#xf08e;</i><font color='red'>техподдержкой.</font></a></p>
-          <div class="program-card">
-          <div class="meta-info">
-            <div class="premiere-date">
-                <span class="icon">📅</span>
-                <span class="text">15 июня 2025</span>
-            </div>
-            <div class="company-address">
-                <span class="icon">🏢</span>
-                <span class="text"><a href="https://yandex.ru/maps/-/CHHsQElY" target="_blank"><i class="demo-icon icon-link-ext">&#xf08e;</i>Галерея-музей «Память». Москва, Покровский бул., 16-18с4-4А</a></span>
-            </div>
-        </div>
-        </div>
-        </div>
+      <!-- Карточка 1: Дом забытых вещей -->
+  <div class="program-card" id="Temat-dom"
+       data-video-src="https://vk.ru/video_ext.php?oid=-214689242&id=456239105"
+       data-title="Дом забытых вещей"
+       data-desc="«Дом забытых вещей» в <a href='https://vk.com/club214313793' target='_blank'><i class='demo-icon icon-link-ext'>&#xf08e;</i><font color='red'>галерее-музее «Память»</font></a> - первая телепередача нового проекта «Тематические телепередачи». Рассказываем про замечательное место в Москве, а также мы включили рассказ про историю и Ходынскую давку 1896 года!<br>
+<br>
+«Тематические телепередачи» – это шанс для компаний, спортивных клубов, школ и частных лиц представить себя аудитории через интернет-телеканал «Райка».<br>
+ Сюжеты создаются совместно с нашими редакторами.<br><br>Для получения дополнительной информации свяжитесь с <a href='https://vk.com/rayka_and_layka_new' target='_blank'><i class='demo-icon icon-link-ext'>&#xf08e;</i><font color='red'>техподдержкой.</font></a>"
+       data-date="15 июня 2025"
+       data-address="Галерея-музей «Память». Москва, Покровский бул., 16-18с4-4А"
+       data-address-link="https://yandex.ru/maps/-/CHHsQElY"
+       data-share-link="https://rayka-and-layka-tv.github.io/Temat#Temat-dom">>   
+      <img src="/theme/images/Dom.png" alt="Тематические 1" class="program-image">
+      <div class="program-info">
+          <h3 class="program-title">Дом забытых вещей</h3>
+          <!-- Короткий текст для карточки (обрезается CSS) -->
+          <p class="program-description">Первая телепередача нового проекта «Тематические телепередачи». Рассказываем про замечательное место в Москве...</p>
+      </div>
+  </div>
+
+<!-- Модальное -->
+  <div class="video-modal" id="videoModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <!-- Контейнер для видео -->
+      <div class="video-wrapper">
+        <div class="video-player"></div>
+      </div>
+      <div class="modal-header">
+          <!-- Сюда JS вставит заголовок -->
+          <h2 class="modal-title"></h2>
+          <!-- Обёртка для описания с мягким скроллом и фоном -->
+          <div class="modal-description-wrapper">
+              <div class="modal-description-container">
+                  <p class="modal-description"></p>
+              </div>
+          </div>
+          <!-- КНОПКА ПОДЕЛИТЬСЯ -->
+          <button id="shareBtn" class="share-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 5v14H4V5l7-7 7 7z" fill="white"/>
+                  <path d="M12 3l-6 6v10h4v-9h4V9l-6-6z" fill="#e53935"/>
+              </svg>
+              Поделиться
+          </button>
+          <!-- ------------------------------------------ -->
+          <!-- Сюда JS будет вставлять блок с датой и адресом -->
+          <div id="dynamic-meta-info"></div>
       </div>
     </div>
+  </div>
 </div>
 
 
 
-
-
+<!-- Уведомление об успешном копировании -->
+<div id="copy-notification" class="copy-notification">
+    ✅ Ссылка скопирована!
+</div>
 <script>
-// Добавляем обработчики событий
-document.querySelectorAll('.program-card').forEach(card => {
-  card.addEventListener('click', () => {
-    document.getElementById('videoModal').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  });
-});
+document.addEventListener('DOMContentLoaded', () => {
+    // --- НАСТРОЙКИ ---
+    const modal = document.getElementById('videoModal');
+    const titleEl = document.querySelector('.modal-title');
+    const descEl = document.querySelector('.modal-description');
+    const playerEl = document.querySelector('.video-player');
+    const metaContainer = document.getElementById('dynamic-meta-info');
+    const shareBtn = document.getElementById('shareBtn');
+    const notifyEl = document.getElementById('copy-notification');
 
-document.querySelector('.close-modal').addEventListener('click', closeModal);
-document.querySelector('.modal-overlay').addEventListener('click', closeModal);
 
-function closeModal() {
-  document.getElementById('videoModal').style.display = 'none';
-  document.body.style.overflow = 'auto';
-  const video = document.querySelector('.video-player');
-  video.pause();
-}
+    // Переменная для хранения ссылки на шаринг
+    let currentShareUrl = '';
 
-// Закрытие по Esc
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeModal();
+    // ==========================================
+    // 1. АВТО-ОТКРЫТИЕ ПО ЯКОРУ (#prog-dom)
+    // ==========================================
+    const hash = window.location.hash;
+    if (hash) {
+        // Ищем карточку с таким ID
+        const targetCard = document.querySelector(hash);
+
+        if (targetCard) {
+            // Сначала плавно скроллим к карточке
+            targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Даем браузеру 0.3 сек на отрисовку скролла, потом эмулируем клик
+            setTimeout(() => {
+                targetCard.click();
+            }, 300);
+        } else {
+            console.warn('⚠️ Карточка с ID "' + hash + '" не найдена на странице!');
+        }
+    }
+
+    // ==========================================
+    // 2. КЛИК ПО КАРТОЧКАМ (.program-card)
+    // ==========================================
+    document.querySelectorAll('.program-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const titleText = card.getAttribute('data-title') || 'Без названия';
+            const descHtml = card.getAttribute('data-desc') || '';
+            const videoSrc = card.getAttribute('data-video-src');
+            const dateText = card.getAttribute('data-date') || '';
+            const realAddressText = card.getAttribute('data-address') || '';
+            const addressLink = card.getAttribute('data-address-link') || '';
+
+            // ВАЖНО: Сохраняем ссылку для шаринга из атрибута data-share-link
+            // Если атрибута нет, берем текущую страницу
+            currentShareUrl = card.getAttribute('data-share-link') || window.location.href;
+
+            if (titleEl) titleEl.textContent = titleText;
+            if (descEl) descEl.innerHTML = descHtml;
+
+            // Заполняем iframe видео
+            if (playerEl && videoSrc) {
+                playerEl.innerHTML = `
+                    <iframe 
+                        src="${videoSrc}" 
+                        frameborder="0" 
+                        allow="clipboard-write; autoplay; encrypted-media; picture-in-picture" 
+                        webkitAllowFullScreen 
+                        mozallowfullscreen 
+                        allowFullScreen
+                        style="width: 100%; height: 100%;"
+                    ></iframe>
+                `;
+            } else if (playerEl) {
+                playerEl.innerHTML = ''; // Очищаем, если видео нет
+            }
+
+            // Формируем блок с датой и адресом
+            let metaInfoHtml = '';
+            if (realAddressText) {
+                metaInfoHtml += `
+                    <div class="meta-info">
+                        <div class="premiere-date">
+                            <span class="icon">📅</span>
+                            <span class="text">${dateText}</span>
+                        </div>
+                        <div class="company-address">
+                            <span class="icon">🏢</span>
+                            <span class="text">
+                                <a href="${addressLink}" target="_blank">
+                                    ${realAddressText}
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                `;
+            } else if (dateText) {
+                metaInfoHtml += `
+                    <div class="meta-info">
+                        <div class="premiere-date">
+                            <span class="icon">📅</span>
+                            <span class="text">${dateText}</span>
+                        </div>
+                    </div>
+                `;
+            }
+            if (metaContainer) metaContainer.innerHTML = metaInfoHtml;
+
+            // Открываем модалку
+            if (modal) modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Блокируем прокрутку фона
+        });
+    });
+
+    // ==========================================
+    // 3. ЛОГИКА КНОПКИ "ПОДЕЛИТЬСЯ"
+    // ==========================================
+    if (shareBtn) {
+        shareBtn.addEventListener('click', shareCurrentItem);
+    }
+
+    function shareCurrentItem() {
+        if (!currentShareUrl) {
+            console.error('❌ Ссылка для отправки не задана!');
+            return;
+        }
+
+        // Проверка: современный мобильный браузер?
+        const isMobile = /Android|iPhone|iPad/.test(navigator.userAgent);
+
+        if (navigator.share && isMobile) {
+            // На телефоне: показываем системное меню шаринга
+            navigator.share({
+                title: document.title,
+                text: "Посмотри эту передачу!",
+                url: currentShareUrl
+            }).catch(err => {
+                console.error('Ошибка нативного шаринга:', err);
+                // Если нативный шаринг не сработал (например, iOS), копируем ссылку
+                copyToClipboardAndShowNotification();
+            });
+        } else {
+            // На ПК (и старых телефонах): просто копируем ссылку и показываем уведомление
+            copyToClipboardAndShowNotification();
+        }
+    }
+
+    // Функция копирования в буфер обмена + красивое уведомление
+    function copyToClipboardAndShowNotification() {
+        navigator.clipboard.writeText(currentShareUrl).then(() => {
+            showNotification('✅ Ссылка скопирована!');
+        }).catch(err => {
+            console.error('Не удалось скопировать через clipboard API:', err);
+            // Фоллбэк: если совсем ничего не вышло, открываем ссылку в новой вкладке
+            window.open(currentShareUrl, '_blank');
+        });
+    }
+
+    // Показываем наше плавное уведомление
+    function showNotification(message) {
+        if (!notifyEl) return;
+        notifyEl.textContent = message;
+        notifyEl.classList.add('visible');
+
+        setTimeout(() => {
+            notifyEl.classList.remove('visible');
+        }, 3000); // Исчезает через 3 секунды
+    }
+
+    // ==========================================
+    // 4. ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА
+    // ==========================================
+    function closeModal() {
+        if (modal) modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Возвращаем прокрутку
+
+        if (playerEl) playerEl.innerHTML = ''; // Останавливаем видео
+        if (metaContainer) metaContainer.innerHTML = '';
+        currentShareUrl = ''; // Сбрасываем ссылку
+    }
+
+    const closeBtn = document.querySelector('.close-modal');
+    const overlay = document.querySelector('.modal-overlay');
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
+
+    // Закрытие по клавише Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
 });
 </script>
   </div><!-- /.entry-content -->
 </section>
+</main>
+	<div class="buttons">
+		<header class="headerr">
+			<div class="logo-section">
+				<img src="/theme/images/B.png">
+				<span class="channel-name">Интернет-телеканал «Райка»</span>
+			</div>
+
+			<nav class="nav-links">
+				<a href="/" class="nav-link">Главная</a>
+				<a href="/livetv" class="nav-link">Прямой эфир</a>
+				<a href="/tele-video" class="nav-link">Телепередачи</a>
+				<a href="/history" class="nav-link">Стать частью команды</a>
+				<!-- <a href="#" class="nav-link">Вакансии</a> -->
+			</nav>
+
+			<div class="hamburger" onclick="toggleMenu()">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+			</header>
+
+			<div class="overlay" onclick="toggleMenu()"></div>
+			<div class="mobile-menu">
+				<a href="/" class="nav-link">Главная</a>
+				<a href="/livetv" class="nav-link">Прямой эфир</a>
+				<a href="/tele-video" class="nav-link">Телепередачи</a>
+				<a href="/history" class="nav-link">Стать частью команды</a>
+				<!-- <a href="#" class="nav-link">Вакансии</a> -->
+			</div>
+
 	</div>
-</body>
-	<div class="podval">
+	<footer class="podval">
 		<div class="title2">
 		</div>
 			<iframe class="ya" src="https://yandex.ru/sprav/widget/rating-badge/231632381437?type=rating&theme=dark" width="300" height="50" frameborder="0"></iframe>
 		<div class="title2"><p>Редакция: red@ral-tv.ru</p>
+			<a href="/rabota">Стать частью команды</a>
 		</div>
 		<div class="footer2">
 		     <div class="sob">
 		          <a href=""><img src="/theme/images/Logorebb.png"></a>
 		     </div>
-		    <div class="contein3"><b>© ИПТВ «Райка», 2026</b>
-		    	<p>.</p></div>
+		    <div class="contein3"><b>© ИПТВ «Райка», 2026</b></div>
 		</div>
+	</footer>
+
+
+
+		<div class="container">
+
+	 <!-- Остальной контент страницы -->
+	 <script>
+	 function toggleMenu() {
+	 const hamburger = document.querySelector('.hamburger');
+	 const mobileMenu = document.querySelector('.mobile-menu');
+	 const overlay = document.querySelector('.overlay');
+	 
+	 hamburger.classList.toggle('active');
+	 mobileMenu.classList.toggle('active');
+	 overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+	 
+	 // Анимация гамбургера
+	 if (hamburger.classList.contains('active')) {
+	 hamburger.children[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
+	 hamburger.children[1].style.opacity = '0';
+	 hamburger.children[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
+	 } else {
+	 hamburger.children[0].style.transform = 'none';
+	 hamburger.children[1].style.opacity = '1';
+	 hamburger.children[2].style.transform = 'none';
+	 }
+	 }
+	 </script>
+				<!-- <div class="logoo">
+					<img src="/theme/images/B.png">
+					<p>Интернет-телеканал «Райка»</p>
+				  
+				</div>
+			</div>
+			<div class="dropdown">
+				<a onclick="myFunction()" class="dropbtn">МЕНЮ</a>
+				<div id="myDropdown" class="dropdown-content">
+				<a class="button" href="/"><p>Главная</p></a>
+				<a class="button" href="/livetv"><p>Прямой эфир</p></a>
+				<a class="button" href="/reklama"><p>Реклама</p></a>
+				<a class="button" href="/history"><p>Вакансии</p></a>
+				<a class="button" href="/rabota"><p>Стать частью команды</p></a>
+				<a class="button" href="/tele-video"><p>Телепередачи</p></a> -->
+				<script> /* Когда пользователь нажимает на кнопку,
+	переключение между скрытием и отображением раскрывающегося содержимого */
+	// function myFunction() {
+	//   document.getElementById("myDropdown").classList.toggle("show");
+	// }
+
+	// Закройте выпадающее меню, если пользователь щёлкает за его пределами
+	// window.onclick = function(event) {
+	//   if (!event.target.matches('.dropbtn')) {
+	//     var dropdowns = document.getElementsByClassName("dropdown-content");
+	//     var i;
+	//     for (i = 0; i < dropdowns.length; i++) {
+	//       var openDropdown = dropdowns[i];
+	//       if (openDropdown.classList.contains('show')) {
+	//         openDropdown.classList.remove('show');
+	//       }
+	//     }
+	//   }
+	// }
+				</script>
+				  </div>
+		</div>
+		
 	</div>
+</body>
 </html>
 
 
