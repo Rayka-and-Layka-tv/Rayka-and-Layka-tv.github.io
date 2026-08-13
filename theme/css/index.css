@@ -1,23 +1,23 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    background-color: #293133;
-    /*background-color: #e6e2e2;*/
+	margin: 0;
+	padding: 0;
+	background-color: #293133;
+	/*background-color: #e6e2e2;*/
 }
 html {
-    box-sizing: border-box;
-    font-size: 17px;
-    color: #e4f1f8;
-    letter-spacing: 0.035em;
-    font-family: 'MS SANS SERIF', sans-serif;
+	box-sizing: border-box;
+	font-size: 17px;
+	color: #e4f1f8;
+	letter-spacing: 0.035em;
+	font-family: 'MS SANS SERIF', sans-serif;
 }
 a {
-    text-decoration: none;
-    color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 iframe {
-    margin-right: 8px;
+	margin-right: 8px;
 }
 
 font-family: 'Moscow Sans', arial;
@@ -247,20 +247,7 @@ font-family: 'Moscow Sans', arial;
 	display: none;
 }
 
-.header .emblem img {
-	display: block;
-	height: 300px;
-	margin-left: auto;
-	margin-right: auto;
-/*	border-radius: 500px;*/
-	margin-top: 80px;
-}
-.header .title p {
-	font-size: 38px;
-	text-align: center;
-	font-weight: bold;
-	margin-bottom: 0;
-}
+
 
 .content {
 	margin-top: 66px;
@@ -1077,11 +1064,7 @@ margin-top: 150px;
 /*НОВОЕ конец*/
 
 
-@media only screen and (max-width: 1544px) {
-	.header .emblem img {
-		height: 250px;
-	}
-}
+
 @media only screen and (max-width: 1500px) {
 	.Opros {
 	margin: 0px 0px 0px 0px;
@@ -1096,12 +1079,6 @@ margin-top: 150px;
 	}
 }
 @media only screen and (max-width: 920px) {
-	html {
-		font-size: 14px;
-	}
-	.header .emblem img {
-		height: 200px;
-	}
 	.emblem_mini img {
 		height: 150px;
 	}
@@ -1117,9 +1094,6 @@ margin-top: 150px;
 	}
 	.Form iframe {
 		width: 500px;
-	}
-	.header .title p {
-		font-size: 35px;
 	}
 	.title1 {
 		font-size: 22px;
@@ -1139,20 +1113,15 @@ margin-top: 150px;
 	.vid1 img {
 	max-width: 300px;
 	}
-	.video iframe {
+	/*.video iframe {
 		width: 620px;
 		height: 305px;
-	}
+	}*/
 	.vik iframe {
 		width: 450px;
 	}
 	.ob h1 {
 		font-size: 20px;
-	}
-}
-@media only screen and (max-width: 887px) {
-	.header .emblem img {
-		height: 200px;
 	}
 }
 @media only screen and (max-width: 612px) {
@@ -1182,14 +1151,8 @@ margin-top: 150px;
 	.tnn p {
 		font-size: 10px;
 	}
-	.header .emblem img {
-		height: 150px;
-	}
 }
 @media only screen and (max-width: 698px) {
-	.header .title p {
-		font-size: 25px;
-	}
 	video {
 		width: 480px;
 		height: 280px;
@@ -1229,9 +1192,6 @@ margin-top: 150px;
 	}
 	.emblem_mini {
 		height: 65px;
-	}
-	.header .emblem img {
-		height: 100px;
 	}
 	.ob {
 	display: block;
