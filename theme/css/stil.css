@@ -678,7 +678,7 @@
 }
 .carousel-title {
   color: #e4f1f8;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 1.2;
   font-weight: 700;
   margin: 0 0 8px 0;
@@ -820,8 +820,12 @@
   .carousel-card {
     height: 320px;
   }
-  .carousel-title-card { font-size: 15px; }
-  .carousel-desc { font-size: 11px; }
+  /*.carousel-title-card {
+    font-size: 15px;
+  }*/
+  .carousel-desc {
+    font-size: 11px;
+    }
 }
 
 

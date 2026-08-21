@@ -1113,10 +1113,10 @@ margin-top: 150px;
 	.vid1 img {
 	max-width: 300px;
 	}
-	/*.video iframe {
+	.video iframe {
 		width: 620px;
 		height: 305px;
-	}*/
+	}
 	.vik iframe {
 		width: 450px;
 	}
@@ -1154,8 +1154,8 @@ margin-top: 150px;
 }
 @media only screen and (max-width: 698px) {
 	video {
-		width: 480px;
-		height: 280px;
+		width: 440px;
+		height: 160px;
 	}
 	.sob img {
 		width: 40px;
@@ -1225,6 +1225,9 @@ margin-top: 150px;
 	}
 	.logo-section img {
 		height: 55px;
+	}
+	.player-media {
+		display: flex;
 	}
 }
 @media only screen and (max-width: 425px) {
